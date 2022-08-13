@@ -1,1 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+
+// font size variables
+$font-size-base: 1.5rem;
+$font-size-sm: 1.2rem;
+$font-size-lg: 2rem;
+
+// font weight variables
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// HSL VALUES VARIABLES
+$hsl-hue: 220;
+$hsl-saturation: 50%;
+
+// color palette variables based on HSL values
+$color-neutral-100: hsl($hsl-hue, $hsl-saturation, 100%);
+$color-neutral-900: hsl($hsl-hue, $hsl-saturation, 7%);
+
+$color-accent: hsl($hsl-hue, $hsl-saturation, 50%);
+
+$color-background: hsl($hsl-hue, $hsl-saturation, 90%);
+
+// margin variables
+$margin-base: 1.5rem;
+$margin-sm: 1rem;
+$margin-lg: 2rem;
+
+// padding variables
+$padding-base: 1.5rem;
+$padding-sm: 1rem;
+$padding-lg: 2rem;
+
+// border radius variables
+$border-radius-base: 0.25rem;
+$border-radius-sm: 0.125rem;
+$border-radius-lg: 0.5rem;
+
+// border variables
+$border-width-base: 1px;
+$border-width-sm: 0.5px;
+$border-width-lg: 2px;
+
+// box shadow variables
+$box-shadow-base: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+$box-shadow-sm: 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+$box-shadow-lg: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+// transition variables
+$transition-base: all 0.2s ease-in-out;
+$transition-sm: all 0.1s ease-in-out;
+$transition-lg: all 0.2s ease-in-out;
+
+// animation variables
+$animation-base: all 0.2s ease-in-out;
+$animation-sm: all 0.1s ease-in-out;
+$animation-lg: all 0.2s ease-in-out;
+
+// grid variables
+$grid-columns: 12;
+$grid-gutter-width: 1rem;
+$grid-row-gap: 1rem;
+$grid-column-gap: 1rem;
+
+// breakpoint variables
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// media query variables
+$media-query-xs: screen and (max-width: $breakpoint-xs);
+$media-query-sm: screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm);
+$media-query-md: screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md);
+$media-query-lg: screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg);
+$media-query-xl: screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl);
