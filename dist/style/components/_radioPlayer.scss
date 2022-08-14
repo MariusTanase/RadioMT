@@ -1,8 +1,8 @@
 .audio__container{
     position: relative;
-    min-width: 10em;
+    min-width: 20em;
     max-width: 48em;
-    margin: 10rem 1rem;
+    margin: 10rem auto;
     height: 100%;
     overflow: hidden;
     
@@ -96,4 +96,15 @@
     border-radius: 50%;
     background: #FFF;
     cursor: pointer;
+}
+
+@media screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-md) {
+    .audio__container{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 10rem;
+        max-width: 90%;
+    }
 }

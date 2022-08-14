@@ -63,14 +63,4 @@ $gap-lg: 2rem;
 
 // breakpoint variables
 $breakpoint-xs: 0;
-$breakpoint-sm: 576px;
 $breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-
-// media query variables
-$media-query-xs: screen and (max-width: $breakpoint-xs);
-$media-query-sm: screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm);
-$media-query-md: screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md);
-$media-query-lg: screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg);
-$media-query-xl: screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl);
