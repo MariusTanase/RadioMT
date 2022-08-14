@@ -8,7 +8,7 @@
     <title>Document</title>
 
     <link href="./dist/dist/css/main.min.css" rel="stylesheet" />
-
+    <script src="https://kit.fontawesome.com/4f9df9b40d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,8 +27,38 @@
             <button class="header__button button">Credits</button>
         </div>
     </header>
-    <main class="container"></main>
-    <footer class="container"></footer>
+    <main class="container">
+        <section class="audio__container">
+            <audio autoplay="autoplay" type="audio/mpeg" src="https://myradio24.com/2288">Your
+                browser does not support this player, please update the version</audio>
+            <div class="audio__wrapper">
+                <div class="audio__info">
+                    <div class="song__title">UPDATING...</div>
+                    <div class="artist__name">UPDATING...</div>
+                </div>
+
+                <div class="audio__buttons">
+                    <div class="audio__icons">
+                        <div>
+                            <span class="audio__playButton">
+                                <i class="fas play-pause fa-play"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="audio__playButton"></span>
+                            <i class="fas volume-muted fa-volume-up"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                        <input id="slider" class="slider" type="range" min="0" max="1" step="0.01"
+                            onchange="setVal(value)" value="0" />
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
     <div class="bg"></div>
     <script defer src="./dist/app.js"></script>
 </body>

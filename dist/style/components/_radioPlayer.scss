@@ -1,0 +1,105 @@
+.audio__container{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+
+    color: $color-neutral-100;
+
+}
+
+.audio__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+    padding: $padding-base;
+    background: hsla($hsl-hue, $hsl-saturation, 8%, 0.1);
+    width: 100%;
+
+    .audio__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: blue;
+        height: 100%;
+        width: 100%;
+        padding: $padding-base;
+        border-radius: $border-radius-base;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    
+        .song__title, .artist__name{
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            color: $color-neutral-100;
+            text-align: center;
+        }
+    }
+
+    .audio__buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: purple;
+        height: 100%;
+        width: 100%;
+        padding: $padding-base;
+        border-radius: $border-radius-base;
+        box-shadow: $box-shadow-base;
+
+    
+        .audio__icons{
+            display: flex;
+            gap: $gap-base;
+            
+
+            .fas{
+                flex: 1 100%;
+                font-size: calc($font-size-lg + 1rem);
+                font-weight: $font-weight-bold;
+                color: $color-neutral-100;
+                text-align: center;
+
+
+                margin: $margin-base;
+            }
+
+        }
+    }
+}
+
+// Volume Bar
+.slider {
+    
+    -webkit-appearance: none;
+    min-width: 40%;
+    height: 1rem;
+    border-radius: .25rem;
+    background: rgba(0, 0, 0, 0.8);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: pointer;
+}
