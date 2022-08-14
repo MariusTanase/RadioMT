@@ -1,9 +1,11 @@
 .audio__container{
     position: relative;
-    width: 90%;
-    margin: 0 auto;
+    min-width: 10em;
+    max-width: 48em;
+    margin: 10rem 1rem;
     height: 100%;
     overflow: hidden;
+    
 
     color: $color-neutral-100;
 
@@ -12,9 +14,8 @@
 .audio__wrapper{
     display: flex;
     flex-direction: column;
-    gap: $gap-lg;
     padding: $padding-base;
-    background: hsla($hsl-hue, $hsl-saturation, 8%, 0.1);
+    background: hsla($hsl-hue, $hsl-saturation, 8%, 0.6);
     width: 100%;
 
     .audio__info{
@@ -22,14 +23,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: blue;
         height: 100%;
         width: 100%;
         padding: $padding-base;
-        border-radius: $border-radius-base;
         overflow: hidden;
-        position: relative;
-        z-index: 1;
     
         .song__title, .artist__name{
             font-size: $font-size-base;
@@ -44,12 +41,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: purple;
         height: 100%;
         width: 100%;
-        padding: $padding-base;
-        border-radius: $border-radius-base;
-        box-shadow: $box-shadow-base;
 
     
         .audio__icons{
@@ -84,6 +77,7 @@
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    margin: $margin-lg 0 $margin-sm 0;
 }
 
 .slider::-webkit-slider-thumb {
