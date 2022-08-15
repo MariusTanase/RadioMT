@@ -84,5 +84,28 @@ volumeBar.addEventListener('input', function () {
     player.volume = volumeBar.value;
 });
 
+// play the audio player when the play button is clicked and pause the audio player when the pause button is clicked
+playButton.addEventListener('click', function () {
+    if (player.paused) {
+        player.play();
+        playButton.classList.remove('fa-play');
+        playButton.classList.add('fa-square');
+    } else {
+        player.pause();
+        playButton.classList.remove('fa-square');
+        playButton.classList.add('fa-play');
+    }
+});
 
-
+// mute the audio player when the mute button is clicked and unmute the audio player when the unmute button is clicked
+muteButton.addEventListener('click', function () {
+    if (player.muted !== true) {
+        player.muted = true;
+        muteButton.classList.remove('fa-volume-up');
+        muteButton.classList.add('fa-volume-mute');
+    } else {
+        player.muted = false;
+        muteButton.classList.remove('fa-volume-mute');
+        muteButton.classList.add('fa-volume-up');
+    }
+});
