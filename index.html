@@ -18,10 +18,11 @@
 
     <header>
         <select>
-            <option value="house">House</option>
-            <option value="lofi">Lofi</option>
-            <option value="drumandbass">Drum and Bass</option>
-            <option value="techno">Techno</option>
+            <option id="genre" value="deephouse">Deep House</option>
+            <option id="genre" value="ibiza">Ibiza Party</option>
+            <option id="genre" value="dancehall">Drum and Bass</option>
+            <option id="genre" value="chill">Chill / Lounge</option>
+            <option id="genre" value="techno">Techno</option>
         </select>
 
         <div class="header__wrapper">
@@ -31,19 +32,21 @@
     </header>
     <main class="container">
         <section class="audio__container">
-            <audio autoplay="autoplay" type="audio/mpeg" src="https://myradio24.com/2288">Your
+
+
+            <audio class="player" autoplay="autoplay" type="audio/mpeg" src="http://live.dancemusic.ro:7000/stream?type=http&nocache=339198">Your
                 browser does not support this player, please update the version</audio>
             <div class="audio__wrapper">
                 <div class="audio__info">
-                    <div class="song__title">UPDATING...</div>
-                    <div class="artist__name">UPDATING...</div>
+                    <div class="playlist__title">UPDATING...</div>
+                    <div class="playlist__artist">UPDATING...</div>
                 </div>
 
                 <div class="audio__buttons">
                     <div class="audio__icons">
                         <div>
                             <span class="audio__playButton">
-                                <i class="fas play-pause fa-play"></i>
+                                <i class="fas play-pause fa-square"></i>
                             </span>
                         </div>
                         <div>
@@ -53,8 +56,7 @@
                         </div>
                     </div>
 
-                    <input id="slider" class="slider" type="range" min="0" max="1" step="0.01" onchange="setVal(value)"
-                        value="0" />
+                    <input id="slider" class="slider" type="range" min="0" max="1" step="0.01" value=".5" />
 
                 </div>
             </div>
