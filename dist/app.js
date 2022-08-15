@@ -74,4 +74,15 @@ changeBackground();
 
 // Audio Elements
 
+const player = document.querySelector('.player');
+const playButton = document.querySelector('.play-pause');
+const muteButton = document.querySelector('.volume-muted');
+const volumeBar = document.querySelector('.slider');
+
+// set the volume to the value of the slider
+volumeBar.addEventListener('input', function () {
+    player.volume = volumeBar.value;
+});
+
+
 
