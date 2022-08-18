@@ -1,0 +1,53 @@
+.select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    select{
+        border: none;
+        border-radius: $border-radius-base;
+        background-color: $color-neutral-100;
+        color: $color-neutral-900;
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        padding: $padding-sm;
+        transition: $transition-base;
+        animation: $animation-base;
+        cursor: pointer;
+    
+        margin: $margin-base 0;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    
+        option{
+            color: $color-neutral-100;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            padding: $padding-sm;
+            transition: $transition-base;
+            animation: $animation-base;
+            cursor: pointer;
+        }
+    
+    
+        &:hover {
+            background-color: $color-neutral-900;
+            color: $color-neutral-100;
+        }
+    
+        &:focus {
+            outline: none;
+        }
+    
+        &:active {
+            background-color: $color-neutral-900;
+            color: $color-neutral-100;
+        }
+    
+    
+        
+    }
+}
