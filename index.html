@@ -20,8 +20,23 @@
        
 
         <div class="header__wrapper">
-            <button class="header__button button"><i class="fa-solid fa-gear"></i></button>
+            <button class="settings__button button header__button"><i class="fa-solid fa-gear"></i></button>
             <button class="header__button button"><i class="fa-solid fa-info"></i></button>
+        </div>
+
+        <div class="settings">
+            <label for="intervalSetting">Background Rotation interval:</label>
+            <select name="interval" id="intervalSetting">
+                <option value="600">1 minute</option>
+                <option value="4400">2 minutes</option>
+                <option value="300000">5 minutes</option>
+                <option value="600000">10 minutes</option>
+                <option value="1800000"> 30 minutes</option>
+                <option value="3600000">1 hour</option>
+                <option value="99999999">none</option>
+            </select>
+        
+            <p class="settings__features">More features soon...</p>
         </div>
     </header>
     <main class="container">

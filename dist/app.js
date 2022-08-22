@@ -12,7 +12,7 @@ let images = [{
     }
 ]
 
-// Selecting values from the options form and storing them in variables, from variables we select the values to be equal to the objects parameters in the json file and then we use the values to play a playlist from soundcloud in the background that can be manipulated by the user in audio player that is made in the html file.
+// radio json data
 let playlist = [{
     genre: "deephouse",
     src: "http://live.dancemusic.ro:7000/stream?type=http&nocache=339198"
@@ -56,9 +56,6 @@ function changeAudioPlayer(select) {
     }
 }
 
-
-
-
 // rotating background based on images in json
 let currentImage = 0;
 // function to rotate images
@@ -69,8 +66,6 @@ function changeBackground() {
     // if the current image is equal to the length of the images array then set the current image to 0
     currentImage = (currentImage + 1) % images.length;
 }
-// set the interval to change the background image every 30 seconds - Dev Enviroment
-setInterval(changeBackground, 30000);
 // Initial run of the changeBackground function to set the background image to the first image
 changeBackground();
 
@@ -112,3 +107,11 @@ muteButton.addEventListener('click', function () {
         muteButton.classList.add('fa-volume-up');
     }
 });
+
+
+// Appear setting menu with active class when the settings button is clicked
+const settingsButton = document.querySelector('.settings__button');
+const settingsMenu = document.querySelector('.settings');
+settingsButton.addEventListener('click', function () {
+    settingsMenu.classList.toggle('active');
+}); 

@@ -1,0 +1,33 @@
+.header__wrapper{
+    z-index: 100;
+}
+
+.settings{
+    background: $color-neutral-100;
+
+    padding: $padding-base;
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 1;
+
+    transition: all 0.5s ease-in-out;
+
+    width: 20%;
+    height: 40vh;
+
+    z-index: 99;
+
+    &.active{
+        left: 0;
+        top: 0;
+
+        padding-top: 7rem;
+    }
+
+    .settings__features{
+        margin-top: $margin-base;
+    }
+}
+
