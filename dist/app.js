@@ -6,6 +6,9 @@ let images = [{
     },
     {
         "url": "./dist/images/bgImage2.jpg",
+    },
+    {
+        "url": "./dist/images/bgImage3.jpg",
     }
 ]
 
