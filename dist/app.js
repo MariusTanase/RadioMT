@@ -49,9 +49,6 @@ settingsButton.addEventListener('click', function () {
     settingsMenu.classList.toggle('active');
 });
 
-
-console.log()
-
 // compare the select value with the genre value from the playlist array and if they are equal then change the audio player src to the src value from the playlist array
 function changeAudioPlayer(select) {
     for (let i = 0; i < playlist.length; i++) {
@@ -81,16 +78,12 @@ function updateRadioSelector() {
 function updateBackgroundInterval() {
     selectChoice = document.querySelectorAll('#intervalSetting')[0].value;
     changeBackgroundInterval(selectChoice);
-    console.log(selectChoice)
 }
 
 function changeBackgroundInterval(selectChoice) { 
     clearInterval(interval);
     interval = setInterval(changeBackground, selectChoice);
 }
-
-
-
 
 
 // set the volume to the value of the slider
@@ -125,11 +118,6 @@ muteButton.addEventListener('click', function () {
 });
 
 
-
-
-
-
-
 // EVENT LISTENERS
 selectRadio.addEventListener("change", updateRadioSelector);
 selectChoice.addEventListener("change", updateBackgroundInterval);
@@ -137,3 +125,9 @@ selectChoice.addEventListener("change", updateBackgroundInterval);
 // Function calls
 changeBackground()
 updateBackgroundInterval();
+
+// ParticleJS
+
+particlesJS.load('particles-js', './particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
