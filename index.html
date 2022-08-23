@@ -27,8 +27,8 @@
         <div class="settings">
             <label for="intervalSetting">Background Rotation interval:</label>
             <select name="interval" id="intervalSetting">
-                <option value="600">1 minute</option>
-                <option value="4400">2 minutes</option>
+                <option value="60000">1 minute</option>
+                <option value="120000">2 minutes</option>
                 <option value="300000">5 minutes</option>
                 <option value="600000">10 minutes</option>
                 <option value="1800000"> 30 minutes</option>
@@ -71,7 +71,7 @@
             </div>
         </section>
         <div class="select">
-        <select>
+        <select class="select__radio">
             <option id="genre" value="deephouse">Deep House</option>
             <option id="genre" value="ibiza">Ibiza Party</option>
             <option id="genre" value="dancehall">Drum and Bass</option>

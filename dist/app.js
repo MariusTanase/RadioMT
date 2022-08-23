@@ -1,6 +1,19 @@
+// Variables
+let selectRadio = document.querySelectorAll('.select__radio')[0];
+let selectChoice = document.querySelectorAll('#intervalSetting')[0];
+let interval;
+// Dropdown menu for settings
+const settingsButton = document.querySelector('.settings__button');
+const settingsMenu = document.querySelector('.settings');
+// Audio Elements
+const player = document.querySelector('.player');
+const playButton = document.querySelector('.play-pause');
+const muteButton = document.querySelector('.volume-muted');
+const volumeBar = document.querySelector('.slider');
 const backgroundElement = document.querySelector('.bg');
+// Selecting the radio player
+let audioPlayer = document.querySelector('.player');
 // JSON data for images
-
 let images = [{
         "url": "./dist/images/bgImage1.jpg",
     },
@@ -30,28 +43,20 @@ let playlist = [{
     src: "http://51.89.195.240:8034/stream/1/"
 }];
 
-// selecting the value from options form and storing it in a variable from select
-let select = document.getElementsByTagName('select')[0];
 
-// Update the select value with the value from option
-function updateSelect() {
-    select = document.getElementsByTagName('select')[0].value;
-    changeAudioPlayer(select)
-}
-
-// Event listener in the select element to update the select value
-select.addEventListener("change", updateSelect);
-
-// Change Audio Player src to the value of the select element from the playlist array
+// Toggle the settings menu
+settingsButton.addEventListener('click', function () {
+    settingsMenu.classList.toggle('active');
+});
 
 
-let audioPlayer = document.querySelector('.player');
+console.log()
 
 // compare the select value with the genre value from the playlist array and if they are equal then change the audio player src to the src value from the playlist array
 function changeAudioPlayer(select) {
     for (let i = 0; i < playlist.length; i++) {
         if (select == playlist[i].genre) {
-            audioPlayer.src = playlist[i].src;
+            player.src = playlist[i].src;
         }
     }
 }
@@ -66,16 +71,27 @@ function changeBackground() {
     // if the current image is equal to the length of the images array then set the current image to 0
     currentImage = (currentImage + 1) % images.length;
 }
-// Initial run of the changeBackground function to set the background image to the first image
-changeBackground();
+
+// Update the select value with the value from option
+function updateRadioSelector() {
+    selectRadio = document.querySelectorAll('.select__radio')[0].value;
+    changeAudioPlayer(selectRadio)
+}
+
+function updateBackgroundInterval() {
+    selectChoice = document.querySelectorAll('#intervalSetting')[0].value;
+    changeBackgroundInterval(selectChoice);
+    console.log(selectChoice)
+}
+
+function changeBackgroundInterval(selectChoice) { 
+    clearInterval(interval);
+    interval = setInterval(changeBackground, selectChoice);
+}
 
 
-// Audio Elements
 
-const player = document.querySelector('.player');
-const playButton = document.querySelector('.play-pause');
-const muteButton = document.querySelector('.volume-muted');
-const volumeBar = document.querySelector('.slider');
+
 
 // set the volume to the value of the slider
 volumeBar.addEventListener('input', function () {
@@ -109,9 +125,15 @@ muteButton.addEventListener('click', function () {
 });
 
 
-// Appear setting menu with active class when the settings button is clicked
-const settingsButton = document.querySelector('.settings__button');
-const settingsMenu = document.querySelector('.settings');
-settingsButton.addEventListener('click', function () {
-    settingsMenu.classList.toggle('active');
-}); 
+
+
+
+
+
+// EVENT LISTENERS
+selectRadio.addEventListener("change", updateRadioSelector);
+selectChoice.addEventListener("change", updateBackgroundInterval);
+
+// Function calls
+changeBackground()
+updateBackgroundInterval();
