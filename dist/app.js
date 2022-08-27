@@ -13,34 +13,33 @@ const volumeBar = document.querySelector('.slider');
 const backgroundElement = document.querySelector('.bg');
 // Selecting the radio player
 let audioPlayer = document.querySelector('.player');
-// JSON data for images
-let images = [{
-        "url": "./dist/images/bgImage1.jpg",
-    },
-    {
-        "url": "./dist/images/bgImage2.jpg",
-    },
-    {
-        "url": "./dist/images/bgImage3.jpg",
-    }
-]
 
-// radio json data
+//   JSON
+let images = [{
+    "url": "./dist/images/bgImage1.jpg",
+},
+{
+    "url": "./dist/images/bgImage2.jpg",
+},
+{
+    "url": "./dist/images/bgImage3.jpg",
+}];
+
 let playlist = [{
-    genre: "deephouse",
-    src: "http://live.dancemusic.ro:7000/stream?type=http&nocache=339198"
+genre: "deephouse",
+src: "http://live.dancemusic.ro:7000/stream?type=http&nocache=339198"
 }, {
-    genre: "ibiza",
-    src: "https://ssl1.viastreaming.net:7005/;listen.mp3"
+genre: "ibiza",
+src: "https://ssl1.viastreaming.net:7005/;listen.mp3"
 }, {
-    genre: "dancehall",
-    src: "http://pulseedm.cdnstream1.com:8124/1373_128"
+genre: "dancehall",
+src: "http://pulseedm.cdnstream1.com:8124/1373_128"
 }, {
-    genre: "chill",
-    src: "http://95.211.3.65:8805/stream/1/"
+genre: "chill",
+src: "http://95.211.3.65:8805/stream/1/"
 }, {
-    genre: "techno",
-    src: "http://51.89.195.240:8034/stream/1/"
+genre: "techno",
+src: "http://51.89.195.240:8034/stream/1/"
 }];
 
 
@@ -86,6 +85,7 @@ function changeBackgroundInterval(selectChoice) {
 }
 
 
+
 // set the volume to the value of the slider
 volumeBar.addEventListener('input', function () {
     player.volume = volumeBar.value;
@@ -127,7 +127,8 @@ changeBackground()
 updateBackgroundInterval();
 
 // ParticleJS
-
 particlesJS.load('particles-js', './particles.json', function() {
     console.log('callback - particles.js config loaded');
   });
+
+
