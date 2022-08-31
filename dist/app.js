@@ -27,36 +27,36 @@ let images = [{
 ];
 
 let playlist = [{
-        genre: "Deep House",
-        src: "https://live.dancemusic.ro:7000/stream"
+        genre: "Mixadance Fm",
+        src: "https://stream.mixadance.fm/mixadance128"
     }, {
         genre: "Ibiza House",
         src: "https://ssl1.viastreaming.net:7005/;listen.mp3"
     }, {
-        genre: "Dancme Hall",
-        src: "https://pulseedm.cdnstream1.com:8124/1373_128"
+        genre: "Virgin Radio Romania",
+        src: "https://astreaming.edi.ro:8443/VirginRadio_aac"
     }, {
-        genre: "Chill",
-        src: "https://95.211.3.65:8805/stream/1/"
+        genre: "KSS FM Deep",
+        src: "https://streams.radio.co/sdc9cfaf77/listen"
     }, {
-        genre: "Techno",
-        src: "https://51.89.195.240:8034/stream/1/"
+        genre: "Capital FM",
+        src: "https://media-ssl.musicradio.com/CapitalMP3"
     },
     {
         genre: 'Dance UK',
         src: 'https://uk2.internet-radio.com/proxy/danceradiouk?mp=/stream'
     },
     {
-        genre: 'Dance UK 2',
-        src: 'https://uk6.internet-radio.com:8332/listen.pls'
+        genre: 'Pro FM Romania',
+        src: 'https://edge126.rcs-rds.ro/profm/profm.mp3#W'
     },
     {
-        genre: 'Deep House 2',
+        genre: 'Deep House',
         src: 'https://91.121.175.25:8000/stream/1/'
     },
     {
         genre: 'Music Factory',
-        src: 'https://i4.streams.ovh:9000/stream/1/'
+        src: 'https://i4.streams.ovh/sc/musicfactory/stream'
     }
 ];
 
