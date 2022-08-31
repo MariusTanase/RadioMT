@@ -10,7 +10,7 @@
     <!-- favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="./dist/dist/css/main.min.css" rel="stylesheet" />
+    <link href="/dist/css/main.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,8 +19,8 @@
 <body >
     <header>
         <div class="header__wrapper">
-            <button class="settings__button button header__button"><i class="fa-solid fa-gear"></i></button>
-            <button class="header__button button"><i class="fa-solid fa-info"></i></button>
+            <button aria-label="Settings button" class="settings__button button header__button"><i class="fa-solid fa-gear"></i></button>
+            <button aria-label="Information button" class="header__button button"><i class="fa-solid fa-info"></i></button>
         </div>
 
         <div class="settings">
@@ -42,13 +42,13 @@
         <section class="audio__container">
 
 
-            <audio class="player" autoplay type="audio/mpeg" src="http://live.dancemusic.ro:7000/stream?type=http&nocache=339198">Your
+            <audio class="player" autoplay="autoplay" type="audio/mpeg" src="http://live.dancemusic.ro:7000/stream?type=http&nocache=339198">Your
                 browser does not support this player, please update the version</audio>
             <div class="audio__wrapper">
-                <div class="audio__info">
+                <!-- <div class="audio__info">
                     <div class="playlist__title">UPDATING...</div>
                     <div class="playlist__artist">UPDATING...</div>
-                </div>
+                </div> -->
 
                 <div class="audio__buttons">
                     <div class="audio__icons">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
 
-                    <input id="slider" class="slider" type="range" min="0" max="1" step="0.01" value=".5" />
+                    <input aria-label="Volume slider" id="slider" class="slider" type="range" min="0" max="1" step="0.01" value=".2" />
 
                 </div>
             </div>
@@ -81,8 +81,8 @@
     </main>
     <div id="particles-js"></div>
     <div class="bg"></div>
-    <script defer src="./dist/particles.min.js"></script>
-    <script type="module" defer src="./dist/app.js"></script>
+    <script defer src="/dist/particles.min.js"></script>
+    <script defer src="/dist/app.js"></script>
     
 </body>
 </html>

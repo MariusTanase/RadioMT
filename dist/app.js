@@ -74,20 +74,23 @@ function updateRadioSelector() {
     changeAudioPlayer(selectRadio)
 }
 
+// Update the background based on the time chosen in the settings menu
 function updateBackgroundInterval() {
     selectChoice = document.querySelectorAll('#intervalSetting')[0].value;
     changeBackgroundInterval(selectChoice);
 }
-
+// change the background interval based on the value from the settings menu
 function changeBackgroundInterval(selectChoice) { 
     clearInterval(interval);
     interval = setInterval(changeBackground, selectChoice);
 }
 
 
+// default volume for the audio player
+player.volume = 0.4;
 
 // set the volume to the value of the slider
-volumeBar.addEventListener('input', function () {
+volumeBar.addEventListener('change', () => {
     player.volume = volumeBar.value;
 });
 
@@ -117,7 +120,6 @@ muteButton.addEventListener('click', function () {
     }
 });
 
-
 // EVENT LISTENERS
 selectRadio.addEventListener("change", updateRadioSelector);
 selectChoice.addEventListener("change", updateBackgroundInterval);
@@ -127,8 +129,8 @@ changeBackground()
 updateBackgroundInterval();
 
 // ParticleJS
-particlesJS.load('particles-js', './particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
+particlesJS.load('particles-js', 'particles.json', function() {
+    return;
+});
 
 
