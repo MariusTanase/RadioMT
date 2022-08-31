@@ -16,31 +16,49 @@ let audioPlayer = document.querySelector('.player');
 
 //   JSON
 let images = [{
-    "url": "./dist/images/bgImage1.jpg",
-},
-{
-    "url": "./dist/images/bgImage2.jpg",
-},
-{
-    "url": "./dist/images/bgImage3.jpg",
-}];
+        "url": "./dist/images/bgImage1.jpg",
+    },
+    {
+        "url": "./dist/images/bgImage2.jpg",
+    },
+    {
+        "url": "./dist/images/bgImage3.jpg",
+    }
+];
 
 let playlist = [{
-genre: "deephouse",
-src: "http://live.dancemusic.ro:7000/stream?type=http&nocache=339198"
-}, {
-genre: "ibiza",
-src: "https://ssl1.viastreaming.net:7005/;listen.mp3"
-}, {
-genre: "dancehall",
-src: "http://pulseedm.cdnstream1.com:8124/1373_128"
-}, {
-genre: "chill",
-src: "http://95.211.3.65:8805/stream/1/"
-}, {
-genre: "techno",
-src: "http://51.89.195.240:8034/stream/1/"
-}];
+        genre: "Deep House",
+        src: "https://live.dancemusic.ro:7000/stream"
+    }, {
+        genre: "Ibiza House",
+        src: "https://ssl1.viastreaming.net:7005/;listen.mp3"
+    }, {
+        genre: "Dancme Hall",
+        src: "https://pulseedm.cdnstream1.com:8124/1373_128"
+    }, {
+        genre: "Chill",
+        src: "https://95.211.3.65:8805/stream/1/"
+    }, {
+        genre: "Techno",
+        src: "https://51.89.195.240:8034/stream/1/"
+    },
+    {
+        genre: 'Dance UK',
+        src: 'https://uk2.internet-radio.com/proxy/danceradiouk?mp=/stream'
+    },
+    {
+        genre: 'Dance UK 2',
+        src: 'https://uk6.internet-radio.com:8332/listen.pls'
+    },
+    {
+        genre: 'Deep House 2',
+        src: 'https://91.121.175.25:8000/stream/1/'
+    },
+    {
+        genre: 'Music Factory',
+        src: 'https://i4.streams.ovh:9000/stream/1/'
+    }
+];
 
 
 // Toggle the settings menu
@@ -80,11 +98,20 @@ function updateBackgroundInterval() {
     changeBackgroundInterval(selectChoice);
 }
 // change the background interval based on the value from the settings menu
-function changeBackgroundInterval(selectChoice) { 
+function changeBackgroundInterval(selectChoice) {
     clearInterval(interval);
     interval = setInterval(changeBackground, selectChoice);
 }
 
+// Create Option Element in the .select__radio class
+function createOptionElement() {
+    for (let i = 0; i < playlist.length; i++) {
+        let option = document.createElement('option');
+        option.value = playlist[i].genre;
+        option.innerHTML = playlist[i].genre;
+        selectRadio.appendChild(option);
+    }
+}
 
 // default volume for the audio player
 player.volume = 0.4;
@@ -125,12 +152,11 @@ selectRadio.addEventListener("change", updateRadioSelector);
 selectChoice.addEventListener("change", updateBackgroundInterval);
 
 // Function calls
-changeBackground()
+changeBackground();
 updateBackgroundInterval();
+createOptionElement();
 
 // ParticleJS
-particlesJS.load('particles-js', 'particles.json', function() {
+particlesJS.load('particles-js', 'particles.json', function () {
     return;
 });
-
-
