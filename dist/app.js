@@ -125,11 +125,10 @@ volumeBar.addEventListener('change', () => {
     player.volume = volumeBar.value;
 });
 
-// check if status 200 then play the audio
+// check if status 200 then play the audio 
 player.addEventListener('canplay', function () {
     player.play();
-}
-);
+});
 
 // play the audio player when the play button is clicked and pause the audio player when the pause button is clicked
 playButton.addEventListener('click', function () {
