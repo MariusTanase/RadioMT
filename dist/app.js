@@ -61,10 +61,9 @@ let playlist = [{
 ];
 
 
-// Toggle the settings menu
-settingsButton.addEventListener('click', function () {
-    settingsMenu.classList.toggle('active');
-});
+
+
+// -----------------FUNCTIONS OF THE APP-----------------
 
 // compare the select value with the genre value from the playlist array and if they are equal then change the audio player src to the src value from the playlist array
 function changeAudioPlayer(select) {
@@ -72,6 +71,9 @@ function changeAudioPlayer(select) {
         if (select == playlist[i].genre) {
             player.src = playlist[i].src;
         }
+
+        
+
     }
 }
 
@@ -113,6 +115,8 @@ function createOptionElement() {
     }
 }
 
+// -----------------EVENT LISTENERS-----------------
+
 // default volume for the audio player
 player.volume = 0.4;
 
@@ -120,6 +124,12 @@ player.volume = 0.4;
 volumeBar.addEventListener('change', () => {
     player.volume = volumeBar.value;
 });
+
+// check if status 200 then play the audio
+player.addEventListener('canplay', function () {
+    player.play();
+}
+);
 
 // play the audio player when the play button is clicked and pause the audio player when the pause button is clicked
 playButton.addEventListener('click', function () {
@@ -147,16 +157,23 @@ muteButton.addEventListener('click', function () {
     }
 });
 
-// EVENT LISTENERS
+// Toggle the settings menu
+settingsButton.addEventListener('click', function () {
+    settingsMenu.classList.toggle('active');
+});
+
+// Update the select value with the value from option
 selectRadio.addEventListener("change", updateRadioSelector);
 selectChoice.addEventListener("change", updateBackgroundInterval);
 
-// Function calls
+// -----------------FUNCTION CALLS-----------------
+
 changeBackground();
 updateBackgroundInterval();
 createOptionElement();
 
-// ParticleJS
+// -----------------PARTICLE JS FUNCTION LOAD-----------------
+
 particlesJS.load('particles-js', 'particles.json', function () {
     return;
 });
