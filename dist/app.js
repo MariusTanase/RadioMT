@@ -79,22 +79,9 @@ function changeBackground() {
     if (currentImage >= images.length) {
         currentImage = 0;
     }
-    setTimeout(() => {
-        backgroundElement.classList.remove('fade');
-    }, 1000)
     backgroundElement.style.backgroundImage = `url(${images[currentImage].url})`;
-    backgroundElement.classList.add('fade');
-
     currentImage++;
 }
-
-// function changeBackground() {
-//     let image = images[currentImage];
-//     // set the background image to the image url from the json file
-//     backgroundElement.style.backgroundImage = `url(${image.url})`;
-//     // if the current image is equal to the length of the images array then set the current image to 0
-//     currentImage = (currentImage + 1) % images.length;
-// }
 
 // Update the select value with the value from option
 function updateRadioSelector() {

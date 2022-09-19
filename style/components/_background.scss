@@ -22,20 +22,6 @@
   z-index: -1;
 }
 
-// .fade{
-//   animation: fade 1s ease-in-out;
-// }
-
-@keyframes fade {
-  0% {
-    opacity: 1;
-
-  }
-  100% {
-    opacity: 0.3;
-  }
-}
-
 body::-webkit-scrollbar {
   width: .2em;
 }
