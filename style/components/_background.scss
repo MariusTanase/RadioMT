@@ -1,35 +1,50 @@
 .bg {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-    z-index: -2;
+  z-index: -2;
+
+  transition: all 1s ease-in-out;
 }
 
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
 }
 
+// .fade{
+//   animation: fade 1s ease-in-out;
+// }
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
 
 body::-webkit-scrollbar {
-    width: .2em;
-  }
-   
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  body::-webkit-scrollbar-thumb {
-    background-color: hsl(340, 1%, 76%);
-    outline: 1px solid hsl(220, 83%, 77%);
-  }
+  width: .2em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(340, 1%, 76%);
+  outline: 1px solid hsl(220, 83%, 77%);
+}
