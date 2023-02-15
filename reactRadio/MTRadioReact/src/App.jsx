@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div className="App">
-      <Background />
+      <Background settingsInterval={5000} />
     </div>
   )
 }

@@ -1,37 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './background.css';
+import image1 from '../../assets/images/bgImage1.jpg'
+import image2 from '../../assets/images/bgImage2.jpg'
+import image3 from '../../assets/images/bgImage3.jpg'
 
+const Background = ({settingsInterval}) => {
 
-const Background = () => {
-
-    // change the background image to a random image from the images folder
-    // all the iamges are in assets/images
-    // the images are in an array
-    // the array is in the background module
-
-    console.log('background component')
+    const background = useRef(null);
+    const title = useRef(null);
 
     const imagesArray = [
-        '../../assets/images/bgImage1.jpg',
-        '../../assets/images/bgImage2.jpg',
-        '../../assets/images/bgImage3.jpg',
+        image1, image2, image3
     ]
-    const randomImage = imagesArray[Math.floor(Math.random() * imagesArray.length)]
-
-    // the image will be changed to background class
-    // the background class is in background.module.css
-    // the background class is in the div tag
 
 
     useEffect(() => {
-        let background = document.querySelector('.background');
-        background.style.backgroundImage = `url(${randomImage})`;
+
+       const interval = setInterval(() => {
+            const randomImage = imagesArray[Math.floor(Math.random() * imagesArray.length)]
+            background.current.style.backgroundImage = `url(${randomImage})`
+        }, settingsInterval)
+
+        return () => {
+            clearInterval(interval)
+        }
     }, [])
 
   return (
-    <div className='background'>
+    <div ref={background} className='background'>
 
-        <h1>This is BG</h1>
+        <h1 ref={title}>This is BG</h1>
     </div>
   )
 }
