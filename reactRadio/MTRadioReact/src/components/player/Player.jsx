@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
 
 const Player = () => {
-  return (
-    <div className='player__container'>
-        <div className='player__container-title'>
-            <h1>MT Radio</h1>
-        </div>
-        <div className='player__container-player'>
-            <audio controls>
-                <source src="https://streaming.radio.co/sd1b1b1b1b/listen" type="audio/mpeg" />
-            </audio>
-        </div>
 
+
+    const [title, setTitle] = useState('Title')
+    const [artist, setArtist] = useState('Artist')
+    const [image, setImage] = useState('https://via.placeholder.com/150')
+    
+
+
+  return (
+    <div className="audio-player">
+        <div className="track-info">
+            <img
+            className="artwork"
+            src={image}
+            alt={`track artwork for ${title} by ${artist}`}
+            />
+            <h2 className="title">{title}</h2>
+            <h3 className="artist">{artist}</h3>
+        </div>
     </div>
   )
 }
