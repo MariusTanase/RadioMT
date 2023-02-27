@@ -91,7 +91,7 @@ function updateRadioSelector() {
 
 // Update the background based on the time chosen in the settings menu
 function updateBackgroundInterval() {
-    selectChoice = document.querySelectorAll('#intervalSetting')[0].value;
+    selectChoice = document.querySelectorAll('#intervalSetting')[2].value;
     changeBackgroundInterval(selectChoice);
 }
 // change the background interval based on the value from the settings menu
