@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faShuffle, faBackward, faForward, faPlay } from '@fortawesome/free-solid-svg-icons'
 
 const Player = () => {
 
@@ -70,19 +72,16 @@ const Player = () => {
             <button className="control-button shuffle" onClick={() => { 
               randomRadio()
             }}>
-                <i className="fas fa-random"></i>
+               <FontAwesomeIcon icon={faShuffle} />
             </button>
             <button className="control-button previous">
-                <i className="fas fa-step-backward"></i>
+            <FontAwesomeIcon icon={faBackward} />
             </button>
             <button className="control-button play">
-                <i className="fas fa-play"></i>
+                <FontAwesomeIcon icon={faPlay} />
             </button>
             <button className="control-button next">
-                <i className="fas fa-step-forward"></i>
-            </button>
-            <button className="control-button repeat">
-                <i className="fas fa-redo"></i>
+                <FontAwesomeIcon icon={faForward} />
             </button>
         </div>
     </div>

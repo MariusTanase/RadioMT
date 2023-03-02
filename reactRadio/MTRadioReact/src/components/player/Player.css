@@ -33,3 +33,17 @@
     font-weight: 300;
     margin-top: 0;
   }
+
+  .control-button{
+    color: var(--white);
+    font-size: 2em;
+    border: none;
+    background: transparent;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  .control-button:hover{
+    color: var(--gray);
+    cursor: pointer;
+  }
