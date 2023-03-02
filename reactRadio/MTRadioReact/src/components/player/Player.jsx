@@ -9,7 +9,27 @@ const Player = () => {
     const [title, setTitle] = useState('Title')
     const [artist, setArtist] = useState('Artist')
     const [image, setImage] = useState('https://via.placeholder.com/150')
-    
+    const radios = [
+        {
+            title: 'Lofi',
+            artist: 'Radio',
+            image: 'https://static.mytuner.mobi/media/tvos_radios/GHmdJJkVyq.png',
+            url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
+        },
+        {
+            title: 'Classic',
+            artist: 'FM',
+            image: 'https://static.mytuner.mobi/media/tvos_radios/LcaRwmxgF9.png"',
+            url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
+        },
+        {
+            title: 'Heart',
+            artist: 'Dance',
+            image: 'https://via.placeholder.com/150',
+            url: 'https://media-ssl.musicradio.com/HeartDance'
+        }
+    ]
+
     const audioRef = useRef(null)
 
     const playAudio = () => {
@@ -29,26 +49,7 @@ const Player = () => {
     }
 
     const randomRadio = () => {
-        const radios = [
-            {
-                title: 'Radio 1',
-                artist: 'Artist 1',
-                image: 'https://via.placeholder.com/150',
-                url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
-            },
-            {
-                title: 'Radio 2',
-                artist: 'Artist 2',
-                image: 'https://via.placeholder.com/150',
-                url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
-            },
-            {
-                title: 'Radio 3',
-                artist: 'Artist 3',
-                image: 'https://via.placeholder.com/150',
-                url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
-            }
-        ]
+
         const randomRadio = radios[Math.floor(Math.random() * radios.length)]
         setTitle(randomRadio.title)
         setArtist(randomRadio.artist)
@@ -74,7 +75,9 @@ const Player = () => {
             }}>
                <FontAwesomeIcon icon={faShuffle} />
             </button>
-            <button className="control-button previous">
+            <button className="control-button previous" onClick={() =>{
+                pre
+            }}>
             <FontAwesomeIcon icon={faBackward} />
             </button>
             <button className="control-button play">
@@ -84,6 +87,11 @@ const Player = () => {
                 <FontAwesomeIcon icon={faForward} />
             </button>
         </div>
+        <div className="volume-control">
+            <input type="range" min="0" max="1" step="0.01" />
+        </div>
+        <audio ref={audioRef} src={radios[0].url} autoPlay={true} />
+
     </div>
   )
 }
