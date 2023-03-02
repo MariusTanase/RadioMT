@@ -158,7 +158,7 @@ const Player = () => {
             </div>
         </div>
 
-        <audio ref={audioRef} src={radios[2].url} autoPlay={true} radioID ={radios.id}/>
+        <audio ref={audioRef} src={radios[2].url} autoPlay={true}/>
 
     </div>
   )
