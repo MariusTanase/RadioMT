@@ -15,16 +15,17 @@ const Background = ({settingsInterval}) => {
         image1, image2, image3
     ]
 
+    const randomImageFromUnsplash = () => {
+        fetch('https://source.unsplash.com/random/3840x2160/?wallpaper,landscape').then(res => {
+            background.current.style.backgroundImage = `url(${res.url})`
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    }
+
     useEffect(() => {
-
-       const interval = setInterval(() => {
-            const randomImage = imagesArray[Math.floor(Math.random() * imagesArray.length)]
-            background.current.style.backgroundImage = `url(${randomImage})`
-        }, settingsInterval)
-
-        return () => {
-            clearInterval(interval)
-        }
+        randomImageFromUnsplash();
     }, [])
 
     const particlesInit = async (main) => {  
@@ -117,7 +118,6 @@ const Background = ({settingsInterval}) => {
               }
           }}
           />
-
     </div>
   )
 }
