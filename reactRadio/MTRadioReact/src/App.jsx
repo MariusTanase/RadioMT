@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="App">
-      <Background settingsInterval={60000} />
+      <Background/>
       <Player />
     </div>
   )

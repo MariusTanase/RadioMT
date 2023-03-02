@@ -6,7 +6,7 @@ import image3 from '../../assets/images/bgImage3.jpg'
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
 
-const Background = ({settingsInterval}) => {
+const Background = () => {
 
     const background = useRef(null);
     const title = useRef(null);
