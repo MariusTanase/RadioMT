@@ -25,7 +25,7 @@ const Player = () => {
         {
             title: 'Heart',
             artist: 'Dance',
-            image: 'https://via.placeholder.com/150',
+            image: 'https://static.mytuner.mobi/media/tvos_radios/mmvGSBqcQB.png',
             url: 'https://media-ssl.musicradio.com/HeartDance'
         }
     ]
@@ -63,7 +63,11 @@ const Player = () => {
     }
 
     useEffect(() => {
-        volumeControl(0.2)
+        volumeControl(0.1)
+
+        return () => {
+            pauseAudio()
+        }
     }, [])
 
   return (
