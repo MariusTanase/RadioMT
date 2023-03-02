@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faShuffle, faBackward, faForward, faPlay } from '@fortawesome/free-solid-svg-icons'
+import {faShuffle, faBackward, faForward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 
 const Player = () => {
 
@@ -9,6 +9,9 @@ const Player = () => {
     const [title, setTitle] = useState('Title')
     const [artist, setArtist] = useState('Artist')
     const [image, setImage] = useState('https://via.placeholder.com/150')
+
+    const [audioIsRunning, setAudioIsRunning] = useState(false)
+
     const radios = [
         {
             title: 'Lofi',
@@ -34,18 +37,12 @@ const Player = () => {
 
     const playAudio = () => {
         audioRef.current.play()
+        setAudioIsRunning(true)
     }
 
     const pauseAudio = () => {
         audioRef.current.pause()
-    }
-
-    const playPauseAudio = () => {
-        if (audioRef.current.paused) {
-            playAudio()
-        } else {
-            pauseAudio()
-        }
+        setAudioIsRunning(false)
     }
 
     const randomRadio = () => {
@@ -67,6 +64,7 @@ const Player = () => {
 
         return () => {
             pauseAudio()
+            setAudioIsRunning(false)
         }
     }, [])
 
@@ -89,13 +87,26 @@ const Player = () => {
                <FontAwesomeIcon icon={faShuffle} />
             </button>
             <button className="control-button previous" onClick={() =>{
-                pre
+                previousRadio()
             }}>
             <FontAwesomeIcon icon={faBackward} />
             </button>
-            <button className="control-button play">
+
+            {/* if audio is paused, show playbutton, else if audio is running show stop button */}
+            {audioIsRunning ? (
+                <button className="control-button play" onClick={() => {
+                    pauseAudio()
+                }}>
+                <FontAwesomeIcon icon={faPause} />
+                </button>
+            ) : (
+                <button className="control-button play" onClick={() => {
+                    playAudio()
+                }}>
                 <FontAwesomeIcon icon={faPlay} />
-            </button>
+                </button>
+            )}
+
             <button className="control-button next">
                 <FontAwesomeIcon icon={faForward} />
             </button>
