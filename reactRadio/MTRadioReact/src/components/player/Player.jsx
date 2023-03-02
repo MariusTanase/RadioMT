@@ -58,6 +58,14 @@ const Player = () => {
         playAudio()
       }
 
+    const volumeControl = (value) => {
+        audioRef.current.volume = value
+    }
+
+    useEffect(() => {
+        volumeControl(0.2)
+    }, [])
+
   return (
     <div className="audio-player">
         <div className="track-info">
@@ -70,6 +78,7 @@ const Player = () => {
             <h3 className="artist">{artist}</h3>
         </div>
         <div className="controls">
+            <div className='controls-buttons'>
             <button className="control-button shuffle" onClick={() => { 
               randomRadio()
             }}>
@@ -86,11 +95,17 @@ const Player = () => {
             <button className="control-button next">
                 <FontAwesomeIcon icon={faForward} />
             </button>
+            </div>
+            <div className="volume-control">
+            <input type="range" min="0" max="1" step="0.01" 
+            onLoad={() => volumeControl(0.2)}
+            onChange={
+            (e) => volumeControl(e.target.value)
+        }/>
         </div>
-        <div className="volume-control">
-            <input type="range" min="0" max="1" step="0.01" />
         </div>
-        <audio ref={audioRef} src={radios[0].url} autoPlay={true} />
+
+        <audio ref={audioRef} src={radios[0].url} autoPlay={true}/>
 
     </div>
   )
