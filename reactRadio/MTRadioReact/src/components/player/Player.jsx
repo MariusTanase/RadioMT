@@ -78,7 +78,6 @@ const Player = () => {
     }
 
     const nextRadio = () => {
-        console.log(radioID)
         if(radioID === radios.length) {
             setRadioID(1)
         } else {
@@ -95,11 +94,14 @@ const Player = () => {
 
     useEffect(() => {
         volumeControl(0.1)
+        setArtist(radios[2].artist)
+        setTitle(radios[2].title)
+        setImage(radios[2].image)
 
-        return () => {
-            pauseAudio()
-            setAudioIsRunning(false)
-        }
+        // return () => {
+        //     pauseAudio()
+        //     setAudioIsRunning(false)
+        // }
     }, [])
 
   return (
@@ -115,48 +117,48 @@ const Player = () => {
         </div>
         <div className="controls">
             <div className='controls-buttons'>
-            <button className="control-button shuffle" onClick={() => { 
-              randomRadio()
-            }}>
-               <FontAwesomeIcon icon={faShuffle} />
-            </button>
-            <button className="control-button previous" onClick={() =>{
-                previousRadio()
-            }}>
-            <FontAwesomeIcon icon={faBackward} />
-            </button>
-
-            {/* if audio is paused, show playbutton, else if audio is running show stop button */}
-            {audioIsRunning ? (
-                <button className="control-button play" onClick={() => {
-                    pauseAudio()
+                <button className="control-button shuffle" onClick={() => { 
+                randomRadio()
                 }}>
-                <FontAwesomeIcon icon={faPause} />
+                <FontAwesomeIcon icon={faShuffle} />
                 </button>
-            ) : (
-                <button className="control-button play" onClick={() => {
-                    playAudio()
+                <button className="control-button previous" onClick={() =>{
+                    previousRadio()
                 }}>
-                <FontAwesomeIcon icon={faPlay} />
+                <FontAwesomeIcon icon={faBackward} />
                 </button>
-            )}
 
-            <button className="control-button next" onClick={() => {
-                nextRadio()
-            }}>
-                <FontAwesomeIcon icon={faForward} />
-            </button>
+                {/* if audio is paused, show playbutton, else if audio is running show stop button */}
+                {audioIsRunning ? (
+                    <button className="control-button play" onClick={() => {
+                        pauseAudio()
+                    }}>
+                    <FontAwesomeIcon icon={faPause} />
+                    </button>
+                ) : (
+                    <button className="control-button play" onClick={() => {
+                        playAudio()
+                    }}>
+                    <FontAwesomeIcon icon={faPlay} />
+                    </button>
+                )}
+
+                <button className="control-button next" onClick={() => {
+                    nextRadio()
+                }}>
+                    <FontAwesomeIcon icon={faForward} />
+                </button>
             </div>
             <div className="volume-control">
-            <input type="range" min="0" max="1" step="0.01" 
-            onLoad={() => volumeControl(0.2)}
-            onChange={
-            (e) => volumeControl(e.target.value)
-        }/>
-        </div>
+                <input type="range" min="0" max="1" step="0.01" 
+                onLoad={() => volumeControl(0.2)}
+                onChange={
+                (e) => volumeControl(e.target.value)
+                }/>
+            </div>
         </div>
 
-        <audio ref={audioRef} src={radios[0].url} autoPlay={true} radioID ={radios.id}/>
+        <audio ref={audioRef} src={radios[2].url} autoPlay={true} radioID ={radios.id}/>
 
     </div>
   )
