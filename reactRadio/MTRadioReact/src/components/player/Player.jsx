@@ -9,23 +9,26 @@ const Player = () => {
     const [title, setTitle] = useState('Title')
     const [artist, setArtist] = useState('Artist')
     const [image, setImage] = useState('https://via.placeholder.com/150')
-
+    const [radioID, setRadioID] = useState(0)
     const [audioIsRunning, setAudioIsRunning] = useState(false)
 
     const radios = [
-        {
+        {   
+            id: 1,
             title: 'Lofi',
             artist: 'Radio',
             image: 'https://static.mytuner.mobi/media/tvos_radios/GHmdJJkVyq.png',
             url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
         },
         {
+            id: 2,
             title: 'Classic',
             artist: 'FM',
             image: 'https://static.mytuner.mobi/media/tvos_radios/LcaRwmxgF9.png"',
             url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
         },
         {
+            id: 3,
             title: 'Heart',
             artist: 'Dance',
             image: 'https://static.mytuner.mobi/media/tvos_radios/mmvGSBqcQB.png',
@@ -51,6 +54,7 @@ const Player = () => {
         setTitle(randomRadio.title)
         setArtist(randomRadio.artist)
         setImage(randomRadio.image)
+        setRadioID(randomRadio.id)
         audioRef.current.src = randomRadio.url
         playAudio()
       }
@@ -58,6 +62,36 @@ const Player = () => {
     const volumeControl = (value) => {
         audioRef.current.volume = value
     }
+
+    const previousRadio = () => {
+        if(radioID === 1) {
+            setRadioID(radios.length)
+        } else {
+            setRadioID(radioID - 1)
+        }
+        setTitle(radios[radioID - 1].title)
+        setArtist(radios[radioID - 1].artist)
+        setImage(radios[radioID - 1].image)
+        audioRef.current.src = radios[radioID - 1].url
+        playAudio()
+
+    }
+
+    const nextRadio = () => {
+        console.log(radioID)
+        if(radioID === radios.length) {
+            setRadioID(1)
+        } else {
+            setRadioID(radioID + 1)
+        }
+        setTitle(radios[radioID - 1].title)
+        setArtist(radios[radioID - 1].artist)
+        setImage(radios[radioID - 1].image)
+        audioRef.current.src = radios[radioID - 1].url
+        playAudio()
+
+    }
+
 
     useEffect(() => {
         volumeControl(0.1)
@@ -107,7 +141,9 @@ const Player = () => {
                 </button>
             )}
 
-            <button className="control-button next">
+            <button className="control-button next" onClick={() => {
+                nextRadio()
+            }}>
                 <FontAwesomeIcon icon={faForward} />
             </button>
             </div>
@@ -120,7 +156,7 @@ const Player = () => {
         </div>
         </div>
 
-        <audio ref={audioRef} src={radios[0].url} autoPlay={true}/>
+        <audio ref={audioRef} src={radios[0].url} autoPlay={true} radioID ={radios.id}/>
 
     </div>
   )
