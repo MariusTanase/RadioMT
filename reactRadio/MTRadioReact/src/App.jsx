@@ -1,5 +1,6 @@
 import Background from "./components/background/background"
 import Player from "./components/player/Player"
+import Intro from "./components/intro/intro"
 
 function App() {
 

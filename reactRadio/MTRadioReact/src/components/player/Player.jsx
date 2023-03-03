@@ -15,24 +15,35 @@ const Player = () => {
     const radios = [
         {   
             id: 1,
-            title: 'Lofi',
-            artist: 'Radio',
-            image: 'https://static.mytuner.mobi/media/tvos_radios/GHmdJJkVyq.png',
-            url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
+            title: 'Virgin FM',
+            artist: '-',
+            genre: 'Pop',
+            image: 'https://yt3.googleusercontent.com/u5l6CzL3sSRgQJPzNczUX9bvA81HFyIwfdRz-SJR0EQvezpPQAj4J1zmhUK5mH-hEY_Oayg3ecA=s900-c-k-c0x00ffffff-no-rj',
+            url: 'https://radio.virginradio.co.uk/stream'
         },
         {
             id: 2,
             title: 'Classic',
             artist: 'FM',
-            image: 'https://static.mytuner.mobi/media/tvos_radios/LcaRwmxgF9.png"',
-            url: 'https://streaming.radio.co/sd0f1b1b5d/listen'
+            genre: 'Dance',
+            image: 'https://uk.radio.net/images/broadcasts/79/5a/121368/1/c300.png',
+            url: 'https://media-ssl.musicradio.com/ClassicFM'
         },
         {
             id: 3,
             title: 'Heart',
             artist: 'Dance',
+            genre: 'Dance',
             image: 'https://static.mytuner.mobi/media/tvos_radios/mmvGSBqcQB.png',
             url: 'https://media-ssl.musicradio.com/HeartDance'
+        },
+        {
+            id: 4,
+            title: 'Monte Carlo 2',
+            artist: 'Deep House Radio',
+            genre: 'Deep House',
+            image: 'https://cdn.onlineradiobox.com/img/l/8/12078.v9.png',
+            url: 'https://edge.singsingmusic.net/MC2.mp3'
         }
     ]
 
@@ -117,11 +128,7 @@ const Player = () => {
         </div>
         <div className="controls">
             <div className='controls-buttons'>
-                <button className="control-button shuffle" onClick={() => { 
-                randomRadio()
-                }}>
-                <FontAwesomeIcon icon={faShuffle} />
-                </button>
+
                 <button className="control-button previous" onClick={() =>{
                     previousRadio()
                 }}>
@@ -149,7 +156,13 @@ const Player = () => {
                     <FontAwesomeIcon icon={faForward} />
                 </button>
             </div>
+            
             <div className="volume-control">
+            <button className="control-button shuffle" onClick={() => { 
+                randomRadio()
+                }}>
+                <FontAwesomeIcon icon={faShuffle} />
+                </button>
                 <input type="range" min="0" max="1" step="0.01" 
                 onLoad={() => volumeControl(0.2)}
                 onChange={
