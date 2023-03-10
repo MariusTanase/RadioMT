@@ -51,3 +51,32 @@
     font-size: 2rem;
   }
 
+//   animation that will make the opacity from 1 to 0 from 0 to 99 and at 100 it will display none
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      display: none;
+    }
+  }
+
+.hello-container__animation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    z-index: 10000;
+    animation: fadeOut 1s ease-in-out;
+}

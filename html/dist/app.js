@@ -68,7 +68,19 @@ helloLanguages.forEach((word, index) => {
     // each word will be on screen for 2 seconds
     setTimeout(() => {
         helloLanguagesContainer.innerHTML = word;
-    }, 2000 * index);
+    }, 500 * index);
+
+    // after the last word, the container will be display none
+    if (index === helloLanguages.length - 1) {
+        setTimeout(() => {
+            helloContainer.classList.add("hello-container__animation");
+            // after the animation, the container will be display none
+            setTimeout(() => {
+                helloContainer.style.display = "none";
+            }, 900);
+
+        }, 500 * index + 400);
+    }
 
 });
 
