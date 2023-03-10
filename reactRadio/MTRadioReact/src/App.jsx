@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <Intro />
+      {/* <Intro /> */}
       <Background/>
       <Player />
     </div>

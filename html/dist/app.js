@@ -59,6 +59,18 @@ let playlist = [
 ];
 
 
+// -----------------Hello Animation-----------------
+const helloLanguages = ["Hola", "Bonjour", "您好", "Hallo", "Ciao", "안녕하세요", "Olá", "Привет"];
+const helloLanguagesContainer = document.querySelector(".hello-languages");
+const helloContainer = document.querySelector(".hello-container");
+
+helloLanguages.forEach((word, index) => {
+    // each word will be on screen for 2 seconds
+    setTimeout(() => {
+        helloLanguagesContainer.innerHTML = word;
+    }, 2000 * index);
+
+});
 
 
 // -----------------FUNCTIONS OF THE APP-----------------
@@ -171,3 +183,4 @@ createOptionElement();
 particlesJS.load('particles-js', 'particles.json', function () {
     return;
 });
+
