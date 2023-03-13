@@ -1,29 +1,94 @@
-@media screen and (min-width: 1200px){
-    .radios-container{
-        max-width: 1200px;
-        height: auto;
-        margin: 0 auto;
-    }
-    
-    .radios-container img{
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-    
-    .radios-container .radio{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        cursor: pointer;
+.radios-container {
+    background-color: rebeccapurple;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+}
+
+.radios-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.radios-list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.radio-element {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: rgba(32, 25, 25, 0.8);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.radio-element:hover {
+    background-color: hsla(220, 55%, 10%, .9);
+}
+
+@media screen and (max-width: 1200px) {
+    .radios-container {
+        width: 80%;
     }
 }
 
+@media screen and (max-width: 800px) {
+    .radios-container {
+        width: 90%;
+    }
 
+    .radios-container img {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .radio-element{
+        width: 200px;
+    }
+}
 
+@media screen and (max-width: 800px) {
+    .radios-container {
+        width: 90%;
+    }
 
+    .radios-container img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .radio-element{
+        width: 155px;
+        font-size: .8rem;
+    }
 
+    .radio-image{
+        flex: 1 0 50px;
+    }
 
+    .radio-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: .25rem;
+    }
+
+}

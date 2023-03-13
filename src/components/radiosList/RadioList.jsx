@@ -18,7 +18,7 @@ const RadioList = () => {
                 </div>
                 <div className='radio-info'>
                   <h4>{title}</h4>
-                  <p>{genre}</p>
+                  <p>Genre: {genre}</p>
                 </div>
               </li>
             )
