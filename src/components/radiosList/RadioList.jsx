@@ -1,5 +1,4 @@
 import React from 'react'
-import Player from '../player/Player'
 import { radios } from '../../radios'
 import './RadioList.css'
 
@@ -10,7 +9,7 @@ const RadioList = () => {
         <ul className='radios-list'>
           {/* map through the radios list and create a list item for each radio */}
           {radios.map((radio) => {
-            const { id, title, genre, image } = radio
+            const { id, title} = radio
             return (
               <li key={id} className='radio-element'>
                 <div className='radio-image'>
