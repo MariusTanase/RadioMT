@@ -90,7 +90,7 @@ const Player = () => {
 
         const randomRadio = radios[Math.floor(Math.random() * radios.length)]
         setTitle(randomRadio.title)
-        setArtist(randomRadio.artist)
+        setArtist(randomRadio.genre)
         setImage(randomRadio.image)
         setRadioID(randomRadio.id)
         audioRef.current.src = randomRadio.url
@@ -131,17 +131,11 @@ const Player = () => {
 
     }
 
-
     useEffect(() => {
         volumeControl(0.1)
-        setArtist(radios[2].artist)
-        setTitle(radios[2].title)
-        setImage(radios[2].image)
-
-        // return () => {
-        //     pauseAudio()
-        //     setAudioIsRunning(false)
-        // }
+        // set a random radio on load
+        randomRadio()
+        playAudio()
     }, [])
 
   return (
@@ -153,7 +147,7 @@ const Player = () => {
             alt={`track artwork for ${title} by ${artist}`}
             />
             <h2 className="title">{title}</h2>
-            <h3 className="artist">{artist}</h3>
+            <h3 className="artist">Genre: {artist}</h3>
         </div>
         <div className="controls">
             <div className='controls-buttons'>
