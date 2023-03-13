@@ -11,6 +11,7 @@ const Player = () => {
     const [image, setImage] = useState('https://via.placeholder.com/150')
     const [radioID, setRadioID] = useState(0)
     const [audioIsRunning, setAudioIsRunning] = useState(false)
+    const [volume, setVolume] = useState(0.1)
 
     const radios = [
         {   
@@ -97,7 +98,9 @@ const Player = () => {
       }
 
     const volumeControl = (value) => {
-        audioRef.current.volume = value
+        setVolume(value);
+        // update the UI to reflect the new volume
+        audioRef.current.volume = volume
     }
 
     const previousRadio = () => {
@@ -189,7 +192,9 @@ const Player = () => {
                 }}>
                 <FontAwesomeIcon icon={faShuffle} />
                 </button>
-                <input type="range" min="0" max="1" step="0.01" 
+                {/* value has to change when slide */}
+                <input type="range" min="0" max="1" step="0.01"
+                value={audioRef.current ? audioRef.current.volume : 0}
                 onLoad={() => volumeControl(0.2)}
                 onChange={
                 (e) => volumeControl(e.target.value)
