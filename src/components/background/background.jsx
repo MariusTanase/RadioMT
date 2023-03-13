@@ -1,19 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import './background.css';
-import image1 from '../../assets/images/bgImage1.jpg'
-import image2 from '../../assets/images/bgImage2.jpg'
-import image3 from '../../assets/images/bgImage3.jpg'
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
 
 const Background = () => {
 
     const background = useRef(null);
-    const title = useRef(null);
 
-    const imagesArray = [
-        image1, image2, image3
-    ]
 
     const randomImageFromUnsplash = () => {
         fetch('https://source.unsplash.com/random/3840x2160/?wallpaper,landscape').then(res => {
