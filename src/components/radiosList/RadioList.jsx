@@ -1,8 +1,17 @@
 import React from 'react'
+import Player from '../player/Player'
+import { radios } from '../../radios'
 
 const RadioList = () => {
+
+
+
   return (
-    <div>RadioList</div>
+    <div>
+      <Player list={radios}/>
+
+
+    </div>
   )
 }
 

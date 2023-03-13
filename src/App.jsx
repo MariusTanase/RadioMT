@@ -1,6 +1,7 @@
 import Background from "./components/background/background"
 import Player from "./components/player/Player"
 import Intro from "./components/intro/intro"
+import RadioList from "./components/radiosList/RadioList"
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       {/* <Intro /> */}
       <Background/>
-      <Player />
+      <RadioList />
     </div>
   )
 }
