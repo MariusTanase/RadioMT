@@ -7,8 +7,6 @@ const RadioList = () => {
   return (
     <div className='radios-container'>
       {/* create a widget container that will contain all the radios from {radios} */}
-      <div className='radios-widget'>
-        {/* create a list of radios */}
         <ul className='radios-list'>
           {/* map through the radios list and create a list item for each radio */}
           {radios.map((radio) => {
@@ -28,8 +26,6 @@ const RadioList = () => {
         }
         </ul>
       </div>
-    </div>
-
   )
 }
 
