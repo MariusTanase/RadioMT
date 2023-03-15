@@ -77,7 +77,6 @@ const Player = ({list}) => {
         volumeControl(0.1)
         // set a random radio on load
         randomRadio()
-        playAudio()
     }, [])
 
   return (

@@ -6,7 +6,6 @@ const RadioList = () => {
   const changeRadio = (radio) => {
     // change the source of the audio player
     const {url, title, genre, image} = radio
-    // console.log(element);
     const audioPlayer = document.querySelector('audio')
     const playerTitle = document.querySelector('.title')
     const genreTitle = document.querySelector('.artist')
@@ -28,7 +27,8 @@ const RadioList = () => {
         <ul className='radios-list'>
           {/* map through the radios list and create a list item for each radio */}
           {radios.map((radio) => {
-            const { id, title, url, genre} = radio
+            // extract the id and title to generate the elements of the 'buttons'
+            const { id, title} = radio
             return (
               <li key={id} className='radio-element' onClick={() => changeRadio(radio)}>
                 <div className='radio-image'>
