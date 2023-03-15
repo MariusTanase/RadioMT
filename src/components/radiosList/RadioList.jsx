@@ -3,6 +3,14 @@ import { radios } from '../../radios'
 import './RadioList.css'
 
 const RadioList = () => {
+  const changeRadio = (e) => {
+    // change the source of the audio player
+    const audioPlayer = document.querySelector('audio')
+    audioPlayer.src = e.target.src
+    audioPlayer.play()
+  }
+
+
   return (
     <div className='radios-container'>
       {/* create a widget container that will contain all the radios from {radios} */}
@@ -11,7 +19,7 @@ const RadioList = () => {
           {radios.map((radio) => {
             const { id, title} = radio
             return (
-              <li key={id} className='radio-element'>
+              <li key={id} className='radio-element' onClick={(url) => changeRadio(url)}>
                 <div className='radio-image'>
                   <img src={radio.image} alt={title} />
                 </div>
