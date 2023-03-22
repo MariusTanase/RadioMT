@@ -1,7 +1,3 @@
-function setArtist(artist) {
-    document.querySelector('.artist').textContent = artist;
-}
-
 function setRadio(radio) {
     document.querySelector('audio').src = radio;
 }
@@ -24,7 +20,7 @@ function stopRadio() {
 }
 
 function setGenre(genre) {
-    document.querySelector('.artist').textContent = `Genre: ${genre}`;
+    document.querySelector('.genre').textContent = `Genre: ${genre}`;
 }
 
 function setRadioVolume(volume) {

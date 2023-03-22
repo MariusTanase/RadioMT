@@ -25,7 +25,7 @@ const Player = ({list}) => {
 
         const randomRadio = list[Math.floor(Math.random() * list.length)]
         setRadioName(randomRadio.title)
-        setArtist(randomRadio.artist)
+        setGenre(randomRadio.artist)
         setRadioImage(randomRadio.image, randomRadio.title, randomRadio.genre)
         setRadioID(randomRadio.id)
         setRadio(randomRadio.url)
@@ -61,8 +61,8 @@ const Player = ({list}) => {
             <img
             className="artwork"
             />
-            <h2 className="title">""</h2>
-            <h3 className="artist">Genre: </h3>
+            <h2 className="title"></h2>
+            <h3 className="genre"></h3>
         </div>
         <div className="controls">
             <div className='controls-buttons'>
