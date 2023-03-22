@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShuffle, faForward, faBackward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
-import { startRadio, stopRadio, setRadio, setRadioGenre, setRadioImage,setRadioName, setRadioVolume } from '../../utils/radio'
+import { startRadio, stopRadio, setRadio, setRadioGenre, setRadioImage,setRadioName, setRadioVolume} from '../../utils/radio'
 
 const Player = ({list}) => {
     const [radioId, setRadioID] = useState(0)
@@ -20,14 +20,10 @@ const Player = ({list}) => {
         setAudioIsRunning(false)
     }
 
+    // can include itself
     const randomRadio = () => {
         const randomRadio = list[Math.floor(Math.random() * list.length)]
         setRadioID(randomRadio.id)
-        console.log(`random radio id: ${randomRadio.id}`)
-        console.log(`radio id: ${radioId}`)
-        if(randomRadio.id == radioId){
-            randomRadio()
-        }
         setRadioName(randomRadio.title)
         setRadioGenre(randomRadio.artist)
         setRadioImage(randomRadio.image, randomRadio.title, randomRadio.genre)
@@ -96,7 +92,7 @@ const Player = ({list}) => {
     }
 
     useEffect(() => {
-        setVolume(0.1)
+        volumeControl(0.1)
         // set a random radio on load
         randomRadio()
     }, [])
@@ -152,7 +148,7 @@ const Player = ({list}) => {
                 <input type="range" min="0" max="1" step="0.01"
                 className='volume-slider'
                 value={audioRef.current ? audioRef.current.volume : 0}
-                onLoad={() => volumeControl(0.1)}
+                onLoadStart={() => volumeControl(0.1)}
                 onChange={
                 (e) => volumeControl(e.target.value)
                 }/>
