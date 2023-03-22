@@ -1,8 +1,12 @@
 import React from 'react'
 
-const BackButton = () => {
+const BackButton = ({id}) => {
   return (
-    <div>BackButton</div>
+    <button className="control-button previous" onClick={() =>{
+        previousRadio(id)
+    }}>
+    <FontAwesomeIcon icon={faBackward} />
+    </button>
   )
 }
 

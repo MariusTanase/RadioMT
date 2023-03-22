@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShuffle, faBackward, faForward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+import BackButton from '../playerButtons/BackButton';
 
 const Player = ({list}) => {
 
@@ -93,11 +94,8 @@ const Player = ({list}) => {
         <div className="controls">
             <div className='controls-buttons'>
 
-                <button className="control-button previous" onClick={() =>{
-                    previousRadio()
-                }}>
-                <FontAwesomeIcon icon={faBackward} />
-                </button>
+
+                <BackButton />
 
                 {/* if audio is paused, show playbutton, else if audio is running show stop button */}
                 {audioIsRunning ? (
