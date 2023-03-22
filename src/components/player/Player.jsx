@@ -1,21 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faShuffle, faBackward, faForward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+import {faShuffle, faForward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 import BackButton from '../playerButtons/BackButton';
 
 const Player = ({list}) => {
 
 
     const [title, setTitle] = useState('Title')
-    const [artist, setArtist] = useState('Artist')
     const [image, setImage] = useState('https://via.placeholder.com/150')
     const [radioID, setRadioID] = useState(0)
     const [audioIsRunning, setAudioIsRunning] = useState(false)
     const [volume, setVolume] = useState(0.1)
-
-    console.log()
-
 
     const audioRef = useRef(null)
 
@@ -46,19 +42,7 @@ const Player = ({list}) => {
         audioRef.current.volume = volume
     }
 
-    const previousRadio = () => {
-        if(radioID === 1) {
-            setRadioID(list.length)
-        } else {
-            setRadioID(radioID - 1)
-        }
-        setTitle(list[radioID - 1].title)
-        setArtist(list[radioID - 1].artist)
-        setImage(list[radioID - 1].image)
-        audioRef.current.src = list[radioID - 1].url
-        playAudio()
-
-    }
+ 
 
     const nextRadio = () => {
         if(radioID === list.length) {
