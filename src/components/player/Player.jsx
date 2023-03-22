@@ -5,18 +5,12 @@ import {faShuffle, faForward, faPlay, faPause } from '@fortawesome/free-solid-sv
 import BackButton from '../playerButtons/BackButton';
 
 const Player = ({list}) => {
-
-
-    const [title, setTitle] = useState('Title')
-    const [image, setImage] = useState('https://via.placeholder.com/150')
-    const [radioID, setRadioID] = useState(0)
-    const [audioIsRunning, setAudioIsRunning] = useState(false)
     const [volume, setVolume] = useState(0.1)
 
     const audioRef = useRef(null)
 
     const playAudio = () => {
-        audioRef.current.play()
+        startRadio()
         setAudioIsRunning(true)
     }
 
@@ -42,6 +36,19 @@ const Player = ({list}) => {
         audioRef.current.volume = volume
     }
 
+    const previousRadio = (id) => {
+            if(radioID === list.length) {
+                setRadioID(1)
+            } else {
+                setRadioID(radioID + 1)
+            }
+            setTitle(list[radioID - 1].title)
+            setArtist(list[radioID - 1].artist)
+            setImage(list[radioID - 1].image)
+            audioRef.current.src = list[radioID - 1].url
+            playAudio()
+
+    }
  
 
     const nextRadio = () => {
@@ -79,7 +86,11 @@ const Player = ({list}) => {
             <div className='controls-buttons'>
 
 
-                <BackButton />
+                <button className="control-button previous" onClick={() =>{
+                    previousRadio(id)
+                }}>
+                    <FontAwesomeIcon icon={faBackward} />
+                </button>
 
                 {/* if audio is paused, show playbutton, else if audio is running show stop button */}
                 {audioIsRunning ? (

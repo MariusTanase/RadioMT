@@ -27,6 +27,10 @@ function setGenre(genre) {
     document.querySelector('.genre').textContent = genre;
 }
 
+function setRadioVolume(volume) {
+    document.querySelector('audio').volume = volume;
+}
 
 
-export default {setArtist, setRadio, setRadioName, setRadioImage, startRadio, stopRadio, setGenre};
+
+export default {setArtist, setRadio, setRadioName, setRadioImage, startRadio, stopRadio, setGenre, setRadioVolume};
