@@ -146,7 +146,6 @@ const Player = ({list}) => {
                 <input type="range" min="0" max="1" step="0.01"
                 className='volume-slider'
                 value={audioRef.current ? audioRef.current.volume : 0}
-                onLoadStart={() => volumeControl(0.1)}
                 onChange={
                 (e) => volumeControl(e.target.value)
                 }/>
