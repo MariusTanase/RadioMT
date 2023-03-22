@@ -75,9 +75,8 @@ const Player = ({list}) => {
     const nextRadio = (id) => {
         if(id === list.length-1){
             id = 0
-        } else {
-            id = id + 1
-        }
+        } 
+        id++;
         // set the new id
         setRadioID(id)
         // change the radio
