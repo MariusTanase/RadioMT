@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faShuffle, faForward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
-import BackButton from '../playerButtons/BackButton';
+import {faShuffle, faForward, faBackward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+import { startRadio, stopRadio, setArtist, setRadio, setGenre, setRadioImage,setRadioName, setRadioVolume } from '../../utils/radio'
 
 const Player = ({list}) => {
     const [volume, setVolume] = useState(0.1)
+    const [radioId, setRadioID] = useState(0)
+    const [audioIsRunning, setAudioIsRunning] = useState(false)
 
     const audioRef = useRef(null)
 
@@ -15,18 +17,20 @@ const Player = ({list}) => {
     }
 
     const pauseAudio = () => {
-        audioRef.current.pause()
+        stopRadio()
         setAudioIsRunning(false)
     }
 
     const randomRadio = () => {
 
         const randomRadio = list[Math.floor(Math.random() * list.length)]
-        setTitle(randomRadio.title)
-        setArtist(randomRadio.genre)
-        setImage(randomRadio.image)
+        setRadioName(randomRadio.title)
+        setArtist(randomRadio.artist)
+        setRadioImage(randomRadio.image, randomRadio.title, randomRadio.genre)
         setRadioID(randomRadio.id)
-        audioRef.current.src = randomRadio.url
+        setRadio(randomRadio.url)
+
+        setAudioIsRunning(true)
         playAudio()
       }
 
@@ -37,36 +41,16 @@ const Player = ({list}) => {
     }
 
     const previousRadio = (id) => {
-            if(radioID === list.length) {
-                setRadioID(1)
-            } else {
-                setRadioID(radioID + 1)
-            }
-            setTitle(list[radioID - 1].title)
-            setArtist(list[radioID - 1].artist)
-            setImage(list[radioID - 1].image)
-            audioRef.current.src = list[radioID - 1].url
-            playAudio()
 
     }
  
 
-    const nextRadio = () => {
-        if(radioID === list.length) {
-            setRadioID(1)
-        } else {
-            setRadioID(radioID + 1)
-        }
-        setTitle(list[radioID - 1].title)
-        setArtist(list[radioID - 1].artist)
-        setImage(list[radioID - 1].image)
-        audioRef.current.src = list[radioID - 1].url
-        playAudio()
+    const nextRadio = (id) => {
 
     }
 
     useEffect(() => {
-        volumeControl(0.1)
+        setRadioVolume(0.1)
         // set a random radio on load
         randomRadio()
     }, [])
@@ -76,18 +60,16 @@ const Player = ({list}) => {
         <div className="track-info">
             <img
             className="artwork"
-            src={image}
-            alt={`track artwork for ${title} by ${artist}`}
             />
-            <h2 className="title">{title}</h2>
-            <h3 className="artist">Genre: {artist}</h3>
+            <h2 className="title">""</h2>
+            <h3 className="artist">Genre: </h3>
         </div>
         <div className="controls">
             <div className='controls-buttons'>
 
 
                 <button className="control-button previous" onClick={() =>{
-                    previousRadio(id)
+                    previousRadio(radioId)
                 }}>
                     <FontAwesomeIcon icon={faBackward} />
                 </button>
@@ -108,7 +90,7 @@ const Player = ({list}) => {
                 )}
 
                 <button className="control-button next" onClick={() => {
-                    nextRadio()
+                    nextRadio(radioId)
                 }}>
                     <FontAwesomeIcon icon={faForward} />
                 </button>
