@@ -3,7 +3,7 @@ function setRadio(radio) {
 }
 
 function setRadioName(radioName) {
-   return document.querySelector('.title').textContent = radioName;
+   document.querySelector('.title').textContent = radioName;
 }
 
 function setRadioImage(radioImage, radioName) {
@@ -25,6 +25,8 @@ function setRadioGenre(genre) {
 
 function setRadioVolume(volume) {
     document.querySelector('audio').volume = volume;
+    return volume;
+    // move the bar to the right position
 }
 
 

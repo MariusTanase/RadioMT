@@ -5,7 +5,6 @@ import {faShuffle, faForward, faBackward, faPlay, faPause } from '@fortawesome/f
 import { startRadio, stopRadio, setRadio, setRadioGenre, setRadioImage,setRadioName, setRadioVolume } from '../../utils/radio'
 
 const Player = ({list}) => {
-    const [volume, setVolume] = useState(0.1)
     const [radioId, setRadioID] = useState(0)
     const [audioIsRunning, setAudioIsRunning] = useState(false)
 
@@ -22,35 +21,82 @@ const Player = ({list}) => {
     }
 
     const randomRadio = () => {
-
         const randomRadio = list[Math.floor(Math.random() * list.length)]
+        setRadioID(randomRadio.id)
+        console.log(`random radio id: ${randomRadio.id}`)
+        console.log(`radio id: ${radioId}`)
+        if(randomRadio.id == radioId){
+            randomRadio()
+        }
         setRadioName(randomRadio.title)
         setRadioGenre(randomRadio.artist)
         setRadioImage(randomRadio.image, randomRadio.title, randomRadio.genre)
-        setRadioID(randomRadio.id)
         setRadio(randomRadio.url)
 
         setAudioIsRunning(true)
         playAudio()
       }
 
+    //   unfortunately I couldn't find a better way to move the slider
+    let [volume, setVolume] = useState(0.1)
     const volumeControl = (value) => {
         setVolume(value);
         // update the UI to reflect the new volume
         audioRef.current.volume = volume
     }
+    // change the radio to the previous one
 
+    let [backClicked, setBackClicked] = useState(false)
     const previousRadio = (id) => {
-        console.log(id)
+        // changing the radio based on the id and the list length
+        // first check the ID after change the radio
+        if(!backClicked){
+            setBackClicked(true)
+
+            // if the id is the same, then the radio is the first one in the list
+            // so we set the id to the last radio in the list
+            id = id - 2;
+        } else {
+            // if the id is not the same, then we set the id to the previous radio
+            id = id - 1;
+        }
+        if(id < 0){
+            id = list.length - 1
+        }
+        // set the new id
+        setRadioID(id)
+        // change the radio
+        setRadio(list[id].url)
+        // change the radio info
+        setRadioName(list[id].title)
+        setRadioGenre(list[id].artist)
+        setRadioImage(list[id].image, list[id].title, list[id].genre)
+        // play the radio
+        playAudio()
     }
  
 
+    // change the radio to the next one
     const nextRadio = (id) => {
-        console.log(id)
+        if(id === list.length){
+            id = 0
+        } else {
+            id = id + 1
+        }
+        // set the new id
+        setRadioID(id)
+        // change the radio
+        setRadio(list[id].url)
+        // change the radio info
+        setRadioName(list[id].title)
+        setRadioGenre(list[id].artist)
+        setRadioImage(list[id].image, list[id].title, list[id].genre)
+        // play the radio
+        playAudio()
     }
 
     useEffect(() => {
-        setRadioVolume(0.1)
+        setVolume(0.1)
         // set a random radio on load
         randomRadio()
     }, [])
@@ -104,8 +150,9 @@ const Player = ({list}) => {
                 </button>
                 {/* value has to change when slide */}
                 <input type="range" min="0" max="1" step="0.01"
+                className='volume-slider'
                 value={audioRef.current ? audioRef.current.volume : 0}
-                onLoad={() => volumeControl(0.2)}
+                onLoad={() => volumeControl(0.1)}
                 onChange={
                 (e) => volumeControl(e.target.value)
                 }/>
