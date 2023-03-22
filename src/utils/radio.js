@@ -19,7 +19,7 @@ function stopRadio() {
     document.querySelector('audio').pause();
 }
 
-function setGenre(genre) {
+function setRadioGenre(genre) {
     document.querySelector('.genre').textContent = `Genre: ${genre}`;
 }
 
@@ -29,4 +29,4 @@ function setRadioVolume(volume) {
 
 
 
-export { setArtist, setRadio, setRadioName, setRadioImage, startRadio, stopRadio, setGenre, setRadioVolume };
+export {setRadio, setRadioName, setRadioImage, startRadio, stopRadio, setRadioGenre, setRadioVolume };

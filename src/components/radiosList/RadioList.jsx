@@ -1,23 +1,18 @@
 import React from 'react'
 import { radios } from '../../radios'
+import { setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage } from '../../utils/radio'
 import './RadioList.css'
 
 const RadioList = () => {
   const changeRadio = (radio) => {
     // change the source of the audio player
     const {url, title, genre, image} = radio
-    const audioPlayer = document.querySelector('audio')
-    const playerTitle = document.querySelector('.title')
-    const genreTitle = document.querySelector('.artist')
-    const playerImage = document.querySelector('.artwork')
-    
-    playerTitle.innerHTML = title
-    genreTitle.innerHTML = genre
-    playerImage.src = image
 
-    audioPlayer.src = url;
-
-    audioPlayer.play()
+    setRadio(url)
+    setRadioName(title)
+    setRadioGenre(genre)
+    setRadioImage(image, title)
+    startRadio()
   }
 
 
