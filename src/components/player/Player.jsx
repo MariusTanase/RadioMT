@@ -7,6 +7,7 @@ import { startRadio, stopRadio, setRadio, setRadioGenre, setRadioImage,setRadioN
 const Player = ({list}) => {
     const [radioId, setRadioID] = useState(0)
     const [audioIsRunning, setAudioIsRunning] = useState(false)
+    let [volume, setVolume] = useState(0.1)
 
     const audioRef = useRef(null)
 
@@ -34,11 +35,9 @@ const Player = ({list}) => {
       }
 
     //   unfortunately I couldn't find a better way to move the slider
-    let [volume, setVolume] = useState(0.1)
     const volumeControl = (value) => {
         setVolume(value);
-        // update the UI to reflect the new volume
-        audioRef.current.volume = volume
+        setRadioVolume(volume)
     }
     // change the radio to the previous one
 
@@ -74,7 +73,7 @@ const Player = ({list}) => {
 
     // change the radio to the next one
     const nextRadio = (id) => {
-        if(id === list.length){
+        if(id === list.length-1){
             id = 0
         } else {
             id = id + 1
