@@ -15,4 +15,18 @@ function setRadioImage(radioImage, radioName, genre) {
     image.alt = `${radioName} - with the genre ${genre} image`
 }
 
-export default {setArtist, setRadio, setRadioName};
+function startRadio() {
+    document.querySelector('audio').play();
+}
+
+function stopRadio() {
+    document.querySelector('audio').pause();
+}
+
+function setGenre(genre) {
+    document.querySelector('.genre').textContent = genre;
+}
+
+
+
+export default {setArtist, setRadio, setRadioName, setRadioImage, startRadio, stopRadio, setGenre};
