@@ -78,7 +78,7 @@ const Player = ({ list }) => {
 
 
                 <button className="control-button previous" onClick={() =>{
-                    previousRadio(state.radioId)
+                    previousRadio()
                 }}>
                     <FontAwesomeIcon icon={faBackward} />
                 </button>
@@ -99,7 +99,7 @@ const Player = ({ list }) => {
                 )}
 
                 <button className="control-button next" onClick={() => {
-                    nextRadio(state.radioId)
+                    nextRadio()
                 }}>
                     <FontAwesomeIcon icon={faForward} />
                 </button>
