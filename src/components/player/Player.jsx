@@ -41,34 +41,12 @@ const Player = ({list}) => {
     }
     // change the radio to the previous one
 
-    let [backClicked, setBackClicked] = useState(false)
     const previousRadio = (id) => {
-        // changing the radio based on the id and the list length
-        // first check the ID after change the radio
-        if(!backClicked){
-            setBackClicked(true)
-
-            // if the id is the same, then the radio is the first one in the list
-            // so we set the id to the last radio in the list
-            id = id - 2;
-        } else {
-            // if the id is not the same, then we set the id to the previous radio
-            id = id - 1;
-        }
-        if(id < 0){
-            id = list.length - 1
-        }
-        // set the new id
-        setRadioID(id)
-        // change the radio
-        setRadio(list[id].url)
-        // change the radio info
-        setRadioName(list[id].title)
-        setRadioGenre(list[id].artist)
-        setRadioImage(list[id].image, list[id].title, list[id].genre)
-        // play the radio
-        playAudio()
-    }
+        const { url } = list[id === 0 ? list.length - 1 : id - 1];
+        setRadioID(id === 0 ? list.length - 1 : id - 1);
+        changeRadio(id === 0 ? list.length - 1 : id - 1);
+        playAudio(url);
+      };
  
 
     // change the radio to the next one
