@@ -4,6 +4,7 @@ import { setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage } from
 import './RadioList.css'
 
 const RadioList = () => {
+
   const changeRadio = (radio) => {
     // change the source of the audio player
     const {url, title, genre, image} = radio
