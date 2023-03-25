@@ -5,7 +5,6 @@
     width: fit-content;
     height: fit-content;
     padding: 1rem;
-    margin: 1rem;
     z-index: 100;
     display: flex;
 
@@ -24,6 +23,25 @@
     font-size: 3rem;
     
     color: hsla(220, 100%, 95%, 1);
+}
+
+
+
+.settings-menu{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 20rem;
+    height: 20rem;
+    background-color: hsla(220, 100%, 95%, 1);
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 
@@ -64,4 +82,8 @@
     .settings-button{
         color: #fff;
     }
+}
+
+.hidden{
+    display: none;
 }
