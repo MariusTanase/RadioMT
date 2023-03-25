@@ -4,13 +4,13 @@
     padding: 20px;
     text-align: center;
     font-size: 12px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    height: 3%;
+    height: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    justify-self: end;
 }
 
 .footer a{
@@ -22,5 +22,4 @@
 .footer p{
     margin: 0;
     font-size: 1.1rem;
-
 }

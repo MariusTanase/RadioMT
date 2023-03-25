@@ -1,0 +1,64 @@
+.settings-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+    z-index: 100;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.settings-button{
+/* remove defaults */
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 3rem;
+    
+    color: hsla(220, 50%, 10%, .6);
+}
+
+
+.spin {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* when desktop or tablet > 720px the button is on top right side when mobile, we make a mobile menu at the bottom*/
+@media screen and (max-width: 720px){
+    .settings-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 5rem;
+        background-color: rgba(0, 0, 0, .5);
+
+        border-radius: 1rem 1rem 0 0;
+
+        margin: 0 auto;
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        top: unset;
+    }
+}

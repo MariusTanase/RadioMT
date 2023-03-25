@@ -1,5 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import React from 'react'
+import './Settings.css'
+import { faGear } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const Settings = () => {
   return (
@@ -21,10 +25,10 @@ const Settings = () => {
         {/* - change player animation sync */}
         <button className='settings-button' onClick={
             () => {
-                console.log('settings button clicked')
+                handleMenu()
             }
-        }>
-        <FontAwesomeIcon icon="fa-solid fa-gear" />
+        }>            
+            <FontAwesomeIcon icon={faGear} className='spin'/>
         </button>
 
     </div>
