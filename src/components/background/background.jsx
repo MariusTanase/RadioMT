@@ -2,23 +2,14 @@ import React, { useEffect, useRef } from 'react'
 import './background.css';
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
+import { generateImage } from '../../utils/unsplashBackgroundGeneration'
 
 const Background = () => {
 
     const background = useRef(null);
 
-
-    const randomImageFromUnsplash = () => {
-        fetch('https://source.unsplash.com/random/3840x2160/?wallpaper,landscape').then(res => {
-            background.current.style.backgroundImage = `url(${res.url})`
-        })
-        .catch(err => {
-            console.log(err)
-        });
-    }
-
     useEffect(() => {
-        randomImageFromUnsplash();
+        generateImage('mountains');
     }, [])
 
     const particlesInit = async (main) => {  
