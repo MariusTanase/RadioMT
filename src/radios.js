@@ -54,6 +54,14 @@ export const radios = [
         genre: 'Deep House',
         image: 'https://cdn.onlineradiobox.com/img/l/7/53347.v37.png',
         url: 'https://ascella.streamerr.co/listen/zillionfm/mobile.mp3'
+    },
+    {
+        id: 8,
+        title: 'Lofi Radio',
+        artist: 'Lofi',
+        genre: 'Lofi',
+        image: 'https://cdn.onlineradiobox.com/img/l/8/97478.v9.png',
+        url: 'https://play.streamafrica.net/lofiradio'
     }
     
 
