@@ -4,74 +4,65 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShuffle, faForward, faBackward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 import { startRadio, stopRadio, setRadio, setRadioGenre, setRadioImage,setRadioName, setRadioVolume} from '../../utils/radio'
 
-const Player = ({list}) => {
-    const [radioId, setRadioID] = useState(0)
-    const [audioIsRunning, setAudioIsRunning] = useState(false)
-    let [volume, setVolume] = useState(0.1)
-
-    const audioRef = useRef(null)
-
+const Player = ({ list }) => {
+    const [state, setState] = useState({
+      radioId: 0,
+      audioIsRunning: false,
+      volume: 0.1,
+    });
+  
+    const audioRef = useRef(null);
+  
     const playAudio = () => {
-        startRadio()
-        setAudioIsRunning(true)
-    }
-
+      startRadio();
+      setState((prevState) => ({ ...prevState, audioIsRunning: true }));
+    };
+  
     const pauseAudio = () => {
-        stopRadio()
-        setAudioIsRunning(false)
-    }
-
-    // can include itself
+      stopRadio();
+      setState((prevState) => ({ ...prevState, audioIsRunning: false }));
+    };
+  
+    const changeRadio = (id) => {
+      const radio = list[id];
+      setRadio(radio.url);
+      setRadioName(radio.title);
+      setRadioGenre(radio.artist);
+      setRadioImage(radio.image, radio.title, radio.genre);
+    };
+  
+    const playRadio = (id) => {
+      changeRadio(id);
+      playAudio();
+      setState((prevState) => ({ ...prevState, radioId: id }));
+    };
+  
     const randomRadio = () => {
-        const randomRadio = list[Math.floor(Math.random() * list.length)]
-        setRadioID(randomRadio.id)
-        setRadioName(randomRadio.title)
-        setRadioGenre(randomRadio.artist)
-        setRadioImage(randomRadio.image, randomRadio.title, randomRadio.genre)
-        setRadio(randomRadio.url)
-
-        setAudioIsRunning(true)
-        playAudio()
-      }
-
-    //   unfortunately I couldn't find a better way to move the slider
+      const randomId = Math.floor(Math.random() * list.length);
+      playRadio(randomId);
+    };
+  
+    const previousRadio = () => {
+      let { radioId } = state;
+      radioId = radioId === 0 ? list.length - 1 : radioId - 1;
+      playRadio(radioId);
+    };
+  
+    const nextRadio = () => {
+      let { radioId } = state;
+      radioId = radioId === list.length - 1 ? 0 : radioId + 1;
+      playRadio(radioId);
+    };
+  
     const volumeControl = (value) => {
-        setVolume(value);
-        setRadioVolume(volume)
-    }
-    // change the radio to the previous one
-
-    const previousRadio = (id) => {
-        const { url } = list[id === 0 ? list.length - 1 : id - 1];
-        setRadioID(id === 0 ? list.length - 1 : id - 1);
-        changeRadio(id === 0 ? list.length - 1 : id - 1);
-        playAudio(url);
-      };
- 
-
-    // change the radio to the next one
-    const nextRadio = (id) => {
-        if(id === list.length-1){
-            id = 0
-        } 
-        id++;
-        // set the new id
-        setRadioID(id)
-        // change the radio
-        setRadio(list[id].url)
-        // change the radio info
-        setRadioName(list[id].title)
-        setRadioGenre(list[id].artist)
-        setRadioImage(list[id].image, list[id].title, list[id].genre)
-        // play the radio
-        playAudio()
-    }
-
+      setRadioVolume(value);
+      setState((prevState) => ({ ...prevState, volume: value }));
+    };
+  
     useEffect(() => {
-        volumeControl(0.1)
-        // set a random radio on load
-        randomRadio()
-    }, [])
+      volumeControl(0.1);
+      randomRadio();
+    }, []);
 
   return (
     <div className="audio-player">
@@ -87,13 +78,13 @@ const Player = ({list}) => {
 
 
                 <button className="control-button previous" onClick={() =>{
-                    previousRadio(radioId)
+                    previousRadio(state.radioId)
                 }}>
                     <FontAwesomeIcon icon={faBackward} />
                 </button>
 
                 {/* if audio is paused, show playbutton, else if audio is running show stop button */}
-                {audioIsRunning ? (
+                {state.audioIsRunning ? (
                     <button className="control-button play" onClick={() => {
                         pauseAudio()
                     }}>
@@ -108,7 +99,7 @@ const Player = ({list}) => {
                 )}
 
                 <button className="control-button next" onClick={() => {
-                    nextRadio(radioId)
+                    nextRadio(state.radioId)
                 }}>
                     <FontAwesomeIcon icon={faForward} />
                 </button>
