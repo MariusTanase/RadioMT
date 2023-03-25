@@ -23,3 +23,9 @@
     margin: 0;
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 720px){
+    .footer{
+        display: none;
+    }
+}
