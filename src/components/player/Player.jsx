@@ -16,11 +16,7 @@ const Player = ({ list }) => {
     // if a key is pressed, check if it is a spacebar key and if the audio is running or not and play or pause the audio
     useEffect(() => {
       const handleKeyDown = (event) => {
-        if (event.code === 'Space' && state.audioIsRunning) {
-          pauseAudio();
-        } else if (event.code === 'Space' && !state.audioIsRunning) {
-          playAudio();
-        }
+        event.code === 'Space' && state.audioIsRunning ? pauseAudio() : playAudio();
       };
     
       document.addEventListener('keydown', handleKeyDown);
