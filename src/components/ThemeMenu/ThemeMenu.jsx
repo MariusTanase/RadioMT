@@ -1,13 +1,11 @@
 import React from 'react'
-import './AccordionMenu.css'
+import './ThemeMenu.css'
 
-const AccordionMenu = ({category, content}) => {
-    console.log(content);
+const ThemeMenu = ({category, content}) => {
 
     const randomKey = () => {
         return Math.random() * 999999
     }
-
 
   return (
         <div>
@@ -34,4 +32,4 @@ const AccordionMenu = ({category, content}) => {
     )
 }
 
-export {AccordionMenu}
+export {ThemeMenu}
