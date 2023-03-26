@@ -1,9 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sono:wght@600&display=swap');
 
 :root{
-  --black: #000;
-  --gray: #ccc;
-  --white: #fff;
+  /* Primary colours */
+  --background-color: hsla(0, 0%, 0%, 1);
+  --text-color: hsla(0, 0%, 100%, 1);
+  --player-color: hsla(0, 0%, 100%, 1);
+  --button-color: hsla(0, 0%, 100%, 1);
+  --primary-button: hsla(var(--blue-hue), var(--saturation-50), var(--light-10), var(--opacity-9));
+  --hover-primary-button: hsla(var(--blue-hue), var(--saturation-50), var(--light-30), var(--opacity-9));
+  /* hue, saturation, light, opacity */
+  
+  --red-hue: 0;
+  --orange-hue: 30;
+  --yellow-hue: 60;
+  --green-hue: 120;
+  --cyan-hue: 180;
+  --blue-hue: 220;
+  --purple-hue: 270;
+  --pink-hue: 300;
+  
+  --saturation-0: 0;
+  --saturation-10: 10%;
+  --saturation-20: 20%;
+  --saturation-30: 30%;
+  --saturation-40: 40%;
+  --saturation-50: 50%;
+  --saturation-60: 60%;
+  --saturation-70: 70%;
+  --saturation-80: 80%;
+  --saturation-90: 90%;
+  --saturation-100: 100%;
+
+  --light-0: 0%;
+  --light-10: 10%;
+  --light-20: 20%;
+  --light-30: 30%;
+  --light-40: 40%;
+  --light-50: 50%;
+  --light-60: 60%;
+  --light-70: 70%;
+  --light-80: 80%;
+  --light-90: 90%;
+  --light-100: 100%; 
+
+  --opacity-1: 0.1;
+  --opacity-2: 0.2;
+  --opacity-3: 0.3;
+  --opacity-4: 0.4;
+  --opacity-5: 0.5;
+  --opacity-6: 0.6;
+  --opacity-7: 0.7;
+  --opacity-8: 0.8;
+  --opacity-9: 0.9;
+  --opacity-10: 1;
+
 }
 
 
