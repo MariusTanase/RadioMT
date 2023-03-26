@@ -53,7 +53,6 @@ const Player = ({ list }) => {
       radioId = radioId === list.length - 1 ? 0 : radioId + 1;
       playRadio(radioId);
     };
-      let volumeBar = document.querySelector('.volumeBar')
   
     const volumeControl = (value) => {
       setRadioVolume(value);
