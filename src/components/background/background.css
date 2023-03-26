@@ -11,5 +11,4 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: drop-shadow(0 0 0.75rem var(--background-menu));
 }
