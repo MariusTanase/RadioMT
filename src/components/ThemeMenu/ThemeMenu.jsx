@@ -11,19 +11,16 @@ const ThemeMenu = () => {
             </h5>
             <div className='theme-container__items'>
                 <div className='theme-item'>
-                    <div className='theme-item__color' style={{backgroundColor: 'red'}}></div>
                     <div className='theme-item__name'>
                         Dark
                     </div>
                     </div>
                 <div className='theme-item'>
-                    <div className='theme-item__color' style={{backgroundColor: 'blue'}}></div>
                     <div className='theme-item__name'>
                         Crimson
                     </div>
                 </div>
                 <div className='theme-item'>
-                    <div className='theme-item__color' style={{backgroundColor: 'green'}}></div>
                     <div className='theme-item__name'>
                         Light
                         </div>
