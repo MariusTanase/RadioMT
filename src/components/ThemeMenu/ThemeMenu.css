@@ -1,23 +1,6 @@
-.menu-category {
-    cursor: pointer;
-    font-size: 1rem;
-    padding: .25rem;
-    width: fit-content;
-    margin-top: 2rem;
-}
-.menu-category:hover {
-    opacity: 0.7;
-}
-.content {
-    background-color: hsla(220, 100%, 95%, 1);
-    overflow: hidden;
-    max-height: 0;
-    transition: all 0.3s ease-in-out;
-    font-size: 1.2rem;
-}
-#state:checked ~ .content {  
-  max-height: fit-content;
-}
-.inner {
-  margin: .2rem 1rem;
+.theme-container{
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
 }
