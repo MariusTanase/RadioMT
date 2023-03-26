@@ -1,6 +1,46 @@
 .theme-container{
   width: 100%;
-  
   display: flex;
   flex-direction: column;
+  font-family: 'Sono', sans-serif;
+
+}
+
+.theme-category__title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: 'Sono', sans-serif;
+}
+
+.theme-container__items{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+.theme-item{
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: .5rem;
+  border-radius: 10px;
+  background-color: hsla(240, 100%, 3%, .7);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-item:hover{
+  background-color: hsla(220, 55%, 10%, .9);
 }
