@@ -41,7 +41,7 @@ const Settings = () => {
         {/* button with fa setting that will open and close as a menu */}
         {/* menu with the following options: */}
         {/* - change background */}
-        {/* - change theme */}
+        {/* - change theme - DONE*/}
         {/* - change language */}
         {/* - change volume */}
         {/* - change player size */}

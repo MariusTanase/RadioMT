@@ -26,23 +26,23 @@ const ThemeMenu = () => {
             }</p>
             </h5>
             <div className='theme-container__items'>
-                <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleThemeChange('dark')}>
+                <div className='theme-item' onClick={() => handleThemeChange('dark')}>
+                        <div className='theme-item__name' >
                             Dark
                         </div>
                     </div>
-                <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleThemeChange('crimson')}>
+                <div className='theme-item' onClick={() => handleThemeChange('crimson')}>
+                        <div className='theme-item__name' >
                             Crimson
                         </div>
                 </div>
-                <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleThemeChange('light')}>
+                <div className='theme-item' onClick={() => handleThemeChange('light')}>
+                        <div className='theme-item__name' >
                             Light
                         </div>
                 </div>
-                <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleThemeChange('blue')}>
+                <div className='theme-item' onClick={() => handleThemeChange('blue')}>
+                        <div className='theme-item__name' >
                             Blue
                         </div>
                 </div>
