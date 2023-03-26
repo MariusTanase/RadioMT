@@ -31,14 +31,14 @@
     justify-content: space-evenly;
     padding: .5rem;
     border-radius: 10px;
-    background-color: hsla(240, 100%, 3%, .7);
-    color: white;
+    background-color: var(--background-menu);
+    color: var(--text-color);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .radio-element:hover {
-    background-color: hsla(220, 55%, 10%, .9);
+    background-color: var(--hover-background-menu);
 }
 
 @media screen and (max-width: 1200px) {
