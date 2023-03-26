@@ -6,10 +6,11 @@
   --text-color: hsla(0, 0%, 100%, 1);
   --player-color: hsla(0, 0%, 100%, 1);
   --button-color: hsla(0, 0%, 100%, 1);
-  --primary-button: hsla(var(--blue-hue), var(--saturation-50), var(--light-10), var(--opacity-9));
-  --hover-primary-button: hsla(var(--blue-hue), var(--saturation-50), var(--light-30), var(--opacity-9));
-  /* hue, saturation, light, opacity */
+  --primary-button: hsla(var(--green-hue), var(--saturation-50), var(--light-30), var(--opacity-9));
+  --hover-primary-button: hsla(var(--green-hue), var(--saturation-50), var(--light-40), var(--opacity-9));
+  --background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-10), var(--opacity-8));
   
+  /* hue, saturation, light, opacity */
   --red-hue: 0;
   --orange-hue: 30;
   --yellow-hue: 60;
