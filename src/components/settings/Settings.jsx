@@ -2,6 +2,7 @@ import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Settings.css'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
+import { AccordionMenu } from '../accordion-menu/AccordionMenu'
 
 
 
@@ -29,6 +30,11 @@ const Settings = () => {
     button.classList.remove('hidden')
   }
 
+  let themeContent = {
+    'Light': 'Light',
+    'Dark': 'Dark',
+    'Crimson': 'Crimson',
+  }
 
   return (
     <div className='settings-container'>
@@ -55,25 +61,14 @@ const Settings = () => {
             <FontAwesomeIcon icon={faGear} className='spin'/>
         </button>
         <div className='settings-menu hidden'>
-            <div className='settings-menu-item'>
-                <p>Change Background</p>
-            </div>
-            <div className='settings-menu-item'>
-                <p>Change Theme</p>
-                <div className='settings-menu__item-options'>
-                    <div className='settings-menu-item-option'>
-                        <p>Dark</p>
-                        <p>Crimson</p>
-                        <p>Light</p>
-                    </div>
-                </div>
-            </div>
+          <AccordionMenu category={'Theme'} content={themeContent}/>
+        
 
             <button className='settings-button__close' onClick={
             () => {
               closeMenu()
             }}>Close</button>
-      </div>
+        </div>
     </div>
   )
 }
