@@ -16,6 +16,8 @@
   --background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-10), var(--opacity-8));
   --hover-background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
   
+  --settings-button-color: hsla(var(--blue-hue), var(--saturation-50), var(--light-80), var(--opacity-10));
+
   /* hue, saturation, light, opacity */
   --red-hue: 0;
   --orange-hue: 30;
@@ -77,6 +79,8 @@
 
   --background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-10), var(--opacity-8));
   --hover-background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
+
+  --settings-button-color: hsla(var(--blue-hue), var(--saturation-50), var(--light-80), var(--opacity-10));
 }
 
 [data-theme='crimson'] {
@@ -93,6 +97,8 @@
 
   --background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-10), var(--opacity-8));
   --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
+
+  --settings-button-color: hsla(var(--red-hue), var(--saturation-50), var(--light-40), var(--opacity-10));
 }
 
 [data-theme='light'] {
@@ -109,6 +115,8 @@
 
   --background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-90), var(--opacity-8));
   --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-80), var(--opacity-8));
+
+  --settings-button-color: hsla(var(--red-hue), var(--saturation-50), var(--light-80), var(--opacity-10));
 }
 
 [data-theme='blue'] {
@@ -125,6 +133,8 @@
 
   --background-menu: hsla(var(--blue-hue), var(--saturation-100), var(--light-20), var(--opacity-8));
   --hover-background-menu: hsla(var(--blue-hue), var(--saturation-100), var(--light-30), var(--opacity-8));
+
+  --settings-button-color: hsla(var(--blue-hue), var(--saturation-50), var(--light-90), var(--opacity-10));
 }
 
 *{
