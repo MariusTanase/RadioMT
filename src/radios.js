@@ -41,11 +41,11 @@ export const radios = [
     },
     {
         id: 6,
-        title: 'DH Radio',
+        title: 'Kiss FM Deep',
         artist: 'Deep House',
         genre: 'Deep House',
-        image: 'https://cdn.onlineradiobox.com/img/l/4/80154.v2.png',
-        url: 'http://62.210.105.16:7000/;stream/1'
+        image: 'https://cdn.onlineradiobox.com/img/l/8/5308.v17.png',
+        url: 'https://online.kissfm.ua/KissFM_Deep'
     },
     {
         id: 7,
