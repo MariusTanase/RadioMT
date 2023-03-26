@@ -80,6 +80,41 @@
   --hover-background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
 }
 
+[data-theme='crimson']
+{
+  --background-color: hsla(0, 0%, 0%, 1);
+  --text-color: hsla(0, 0%, 100%, 1);
+  --player-color: hsla(0, 0%, 100%, 1);
+  --button-color: hsla(0, 0%, 100%, 1);
+
+  --hover-button-color: hsla(var(--red-hue), var(--saturation-50), var(--light-80), var(--opacity-10));
+
+  --primary-button: hsla(var(--red-hue), var(--saturation-50), var(--light-30), var(--opacity-9));
+  --primary-button-border: hsla(var(--red-hue), var(--saturation-50), var(--light-40), var(--opacity-9));
+  --hover-primary-button: hsla(var(--red-hue), var(--saturation-30), var(--light-50), var(--opacity-9));
+
+  --background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-10), var(--opacity-8));
+  --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
+}
+
+[data-theme='light']
+{
+  --background-color: hsla(0, 0%, 100%, 1);
+  --text-color: hsla(0, 0%, 0%, 1);
+  --player-color: hsla(0, 0%, 0%, 1);
+  --button-color: hsla(0, 0%, 0%, 1);
+
+  --hover-button-color: hsla(var(--red-hue), var(--saturation-50), var(--light-20), var(--opacity-10));
+
+  --primary-button: hsla(var(--red-hue), var(--saturation-50), var(--light-70), var(--opacity-9));
+  --primary-button-border: hsla(var(--red-hue), var(--saturation-50), var(--light-80), var(--opacity-9));
+  --hover-primary-button: hsla(var(--red-hue), var(--saturation-30), var(--light-50), var(--opacity-9));
+
+  --background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-90), var(--opacity-8));
+  --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-80), var(--opacity-8));
+}
+
+
 *{
   margin: 0;
   padding: 0;
