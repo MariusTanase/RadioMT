@@ -63,7 +63,7 @@
 
 }
 
-[data-theme='Dark']
+[data-theme='dark']
 {
   --background-color: hsla(0, 0%, 0%, 1);
   --text-color: hsla(0, 0%, 100%, 1);
@@ -80,7 +80,7 @@
   --hover-background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
 }
 
-[data-theme='Crimson']
+[data-theme='crimson']
 {
   --background-color: hsla(0, 0%, 0%, 1);
   --text-color: hsla(0, 0%, 100%, 1);
@@ -97,7 +97,7 @@
   --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
 }
 
-[data-theme='Light']
+[data-theme='light']
 {
   --background-color: hsla(0, 0%, 100%, 1);
   --text-color: hsla(0, 0%, 0%, 1);
@@ -114,7 +114,7 @@
   --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-80), var(--opacity-8));
 }
 
-[data-theme='Blue']
+[data-theme='blue']
 {
   --background-color: hsla(0, 0%, 0%, 1);
   --text-color: hsla(0, 0%, 100%, 1);

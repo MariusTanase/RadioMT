@@ -1,53 +1,44 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ThemeMenu.css'
 
 const ThemeMenu = () => {
-    // save in localstorage the theme selected
-    const handleTheme = (theme) => {
-        localStorage.setItem('theme', theme)
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'blue');
 
-        // set the theme in media prefer color scheme
-        window.matchMedia(`(prefers-color-scheme: ${theme})`);
-    }
-
+    const handleThemeChange = (newTheme) => {
+      localStorage.setItem('theme', newTheme);
+      setTheme(newTheme);
+    };
+  
     useEffect(() => {
-        // get the theme saved in localstorage
-        const theme = localStorage.getItem('theme')
-        // if there is no theme saved, set the default theme
-        if (!theme) {
-            localStorage.setItem('theme', 'Blue')
+        // change the window prefered theme to theme
+        window.matchMedia(`(prefers-color-scheme: ${theme})`)
 
-            window.matchMedia('(prefers-color-scheme: Blue)');
-        } else {
-            // if there is a theme saved, set the theme
-            window.matchMedia(`(prefers-color-scheme: ${theme})`);
-        }
-    }, [])
+    }, [theme]);
 
 
   return (
         <div className='theme-container'>
             <h5 className='theme-category__title'>
-                Theme
+            <p>Current Theme: {theme}</p>
             </h5>
             <div className='theme-container__items'>
                 <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleTheme('Dark')}>
+                        <div className='theme-item__name' onClick={() => handleThemeChange('dark')}>
                             Dark
                         </div>
                     </div>
                 <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleTheme('Crimson')}>
+                        <div className='theme-item__name' onClick={() => handleThemeChange('crimson')}>
                             Crimson
                         </div>
                 </div>
                 <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleTheme('Light')}>
+                        <div className='theme-item__name' onClick={() => handleThemeChange('light')}>
                             Light
                         </div>
                 </div>
                 <div className='theme-item'>
-                        <div className='theme-item__name' onClick={() => handleTheme('Blue')}>
+                        <div className='theme-item__name' onClick={() => handleThemeChange('blue')}>
                             Blue
                         </div>
                 </div>
