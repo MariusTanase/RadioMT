@@ -63,8 +63,7 @@
 
 }
 
-[data-theme='dark']
-{
+[data-theme='dark'] {
   --background-color: hsla(0, 0%, 0%, 1);
   --text-color: hsla(0, 0%, 100%, 1);
   --player-color: hsla(0, 0%, 100%, 1);
@@ -80,8 +79,7 @@
   --hover-background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
 }
 
-[data-theme='crimson']
-{
+[data-theme='crimson'] {
   --background-color: hsla(0, 0%, 0%, 1);
   --text-color: hsla(0, 0%, 100%, 1);
   --player-color: hsla(0, 0%, 100%, 1);
@@ -97,8 +95,7 @@
   --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
 }
 
-[data-theme='light']
-{
+[data-theme='light'] {
   --background-color: hsla(0, 0%, 100%, 1);
   --text-color: hsla(0, 0%, 0%, 1);
   --player-color: hsla(0, 0%, 0%, 1);
@@ -114,21 +111,20 @@
   --hover-background-menu: hsla(var(--red-hue), var(--saturation-50), var(--light-80), var(--opacity-8));
 }
 
-[data-theme='blue']
-{
+[data-theme='blue'] {
   --background-color: hsla(0, 0%, 0%, 1);
   --text-color: hsla(0, 0%, 100%, 1);
   --player-color: hsla(0, 0%, 100%, 1);
   --button-color: hsla(0, 0%, 100%, 1);
 
-  --hover-button-color: hsla(var(--blue-hue), var(--saturation-50), var(--light-80), var(--opacity-10));
+  --hover-button-color: hsla(var(--blue-hue), var(--saturation-50), var(--light-90), var(--opacity-10));
 
-  --primary-button: hsla(var(--blue-hue), var(--saturation-50), var(--light-30), var(--opacity-9));
-  --primary-button-border: hsla(var(--blue-hue), var(--saturation-50), var(--light-40), var(--opacity-9));
-  --hover-primary-button: hsla(var(--blue-hue), var(--saturation-30), var(--light-50), var(--opacity-9));
+  --primary-button: hsla(var(--blue-hue), var(--saturation-50), var(--light-20), var(--opacity-9));
+  --primary-button-border: hsla(var(--blue-hue), var(--saturation-50), var(--light-30), var(--opacity-9));
+  --hover-primary-button: hsla(var(--blue-hue), var(--saturation-30), var(--light-40), var(--opacity-9));
 
-  --background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-10), var(--opacity-8));
-  --hover-background-menu: hsla(var(--blue-hue), var(--saturation-50), var(--light-20), var(--opacity-8));
+  --background-menu: hsla(var(--blue-hue), var(--saturation-100), var(--light-20), var(--opacity-8));
+  --hover-background-menu: hsla(var(--blue-hue), var(--saturation-100), var(--light-30), var(--opacity-8));
 }
 
 *{

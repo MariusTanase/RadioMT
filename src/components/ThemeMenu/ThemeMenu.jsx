@@ -11,7 +11,7 @@ const ThemeMenu = () => {
   
     useEffect(() => {
         // change the window prefered theme to theme
-        window.matchMedia(`(prefers-color-scheme: ${theme})`)
+        document.body.setAttribute('data-theme', theme);
 
     }, [theme]);
 
