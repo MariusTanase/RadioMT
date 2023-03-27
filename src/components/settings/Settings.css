@@ -17,16 +17,13 @@
 }
 
 .settings-button{
-/* remove defaults */
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 3rem;
-    
     color: var(--settings-button-color);
 }
-
 
 
 .settings-menu{
@@ -43,6 +40,29 @@
     align-items: center;
     flex-direction: column;
 
+}
+
+.settings-button__close{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .5rem;
+    border-radius: .25rem;
+    border: solid 1px var(--primary-button-border);
+    background-color: var(--primary-button);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem auto;
+}
+
+.settings-button__close:hover{
+    background-color: var(--hover-primary-button);
 }
 
 
