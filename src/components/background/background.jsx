@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import './background.css';
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
-import { generateImage } from '../../utils/unsplashBackgroundGeneration'
+import { generateImage } from '@/utils/unsplashBackgroundGeneration'
 
 const Background = () => {
 

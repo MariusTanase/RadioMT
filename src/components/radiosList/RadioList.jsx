@@ -1,6 +1,6 @@
 import React from 'react'
-import { radios } from '../../radios'
-import { setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage } from '../../utils/radio'
+import { radios } from '@/radios'
+import { setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage } from '@/utils/radio'
 import './RadioList.css'
 
 const RadioList = () => {

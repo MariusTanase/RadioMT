@@ -2,8 +2,8 @@ import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Settings.css'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
-import { ThemeMenu } from '../ThemeMenu/ThemeMenu'
-import BackgroundMenu from '../BackgroundMenu/BackgroundMenu'
+import { ThemeMenu } from '@/ThemeMenu/ThemeMenu'
+import BackgroundMenu from '@/BackgroundMenu/BackgroundMenu'
 
 
 
