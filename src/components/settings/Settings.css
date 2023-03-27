@@ -31,7 +31,7 @@
     top: 0;
     right: 0;
     width: 20rem;
-    height: 20rem;
+    height: auto;
     background-color: var(--background-menu);
     border-radius: .5rem 0 .5rem .5rem;
     padding: 1rem;

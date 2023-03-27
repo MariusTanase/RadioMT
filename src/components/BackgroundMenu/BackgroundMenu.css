@@ -28,7 +28,8 @@
   }
   
   .background-item{
-    width: fit-content;
+    min-width: 120px;
+    max-width: 150px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -56,7 +57,7 @@
   
     .background-container__items{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         grid-row-gap: 1.4rem;
     }
