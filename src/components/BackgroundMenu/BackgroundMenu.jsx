@@ -35,6 +35,26 @@ const BackgroundMenu = () => {
                             Forest
                         </div>
                 </div>
+                <div className='background-item' onClick={() => handleBackgroundChange('cozy')}>
+                        <div className='background-item__name' >
+                            Cozy
+                        </div>
+                </div>
+                <div className='background-item' onClick={() => handleBackgroundChange('japan')}>
+                        <div className='background-item__name' >
+                            Japan
+                        </div>
+                </div>
+                <div className='background-item' onClick={() => handleBackgroundChange('cat')}>
+                        <div className='background-item__name' >
+                            Cat
+                        </div>
+                </div>
+                <div className='background-item' onClick={() => handleBackgroundChange('dog')}>
+                        <div className='background-item__name' >
+                            Dog
+                        </div>
+                </div>
             </div>
         </div>
     )
