@@ -3,6 +3,7 @@ import React from 'react'
 import './Settings.css'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 import { ThemeMenu } from '../ThemeMenu/ThemeMenu'
+import BackgroundMenu from '../BackgroundMenu/BackgroundMenu'
 
 
 
@@ -57,7 +58,7 @@ const Settings = () => {
         </button>
         <div className='settings-menu hidden'>
           <ThemeMenu category={'Theme'} content={themeContent}/>
-        
+          <BackgroundMenu />
 
             <button className='settings-button__close' onClick={
             () => {

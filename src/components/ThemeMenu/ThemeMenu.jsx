@@ -19,11 +19,7 @@ const ThemeMenu = () => {
   return (
         <div className='theme-container'>
             <h5 className='theme-category__title'>
-            <p>Current Theme: {theme.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
-                // first letter of theme to uppercase
-                
-            
-            }</p>
+            <p>Select Theme</p>
             </h5>
             <div className='theme-container__items'>
                 <div className='theme-item' onClick={() => handleThemeChange('dark')}>

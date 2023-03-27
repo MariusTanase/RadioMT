@@ -1,49 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import './ThemeMenu.css'
+import React from 'react'
+import './BackgroundMenu.css'
+import { generateImage } from '../../utils/unsplashBackgroundGeneration'
 
-const ThemeMenu = () => {
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'blue');
+const BackgroundMenu = () => {
 
-    const handleThemeChange = (newTheme) => {
-      localStorage.setItem('theme', newTheme);
-      setTheme(newTheme);
+    const handleBackgroundChange = (backgroundTheme) => {
+        generateImage(backgroundTheme);
     };
-  
-    useEffect(() => {
-        // change the window prefered theme to theme
-        document.body.setAttribute('data-theme', theme);
-
-    }, [theme]);
 
 
   return (
         <div className='background-container'>
             <h5 className='background-category__title'>
-            <p>Current background: {background.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
-                // first letter of background to uppercase
-                
-            
-            }</p>
+            Select Background
             </h5>
             <div className='background-container__items'>
-                <div className='background-item' onClick={() => handlebackgroundChange('dark')}>
+                <div className='background-item' onClick={() => handleBackgroundChange('mountain')}>
                         <div className='background-item__name' >
-                            Dark
+                            Mountain
                         </div>
                     </div>
-                <div className='background-item' onClick={() => handlebackgroundChange('crimson')}>
+                <div className='background-item' onClick={() => handleBackgroundChange('beach')}>
                         <div className='background-item__name' >
-                            Crimson
+                            Beach
                         </div>
                 </div>
-                <div className='background-item' onClick={() => handlebackgroundChange('light')}>
+                <div className='background-item' onClick={() => handleBackgroundChange('sky')}>
                         <div className='background-item__name' >
-                            Light
+                            Sky
                         </div>
                 </div>
-                <div className='background-item' onClick={() => handlebackgroundChange('blue')}>
+                <div className='background-item' onClick={() => handleBackgroundChange('forest')}>
                         <div className='background-item__name' >
-                            Blue
+                            Forest
                         </div>
                 </div>
             </div>
@@ -51,4 +40,4 @@ const ThemeMenu = () => {
     )
 }
 
-export {ThemeMenu}
+export default BackgroundMenu
