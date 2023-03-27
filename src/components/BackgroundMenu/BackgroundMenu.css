@@ -48,3 +48,22 @@
   .background-item:hover{
     background-color: var(--hover-primary-button);
   }
+
+  @media screen and (max-width: 720px) {
+    .background-category__title{
+      font-size: 1.5rem;
+    }
+  
+    .background-container__items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        grid-row-gap: 1.4rem;
+    }
+
+    .background-item{
+      font-size: 1.5rem;
+      margin: auto .2rem;
+  }
+    
+  }
