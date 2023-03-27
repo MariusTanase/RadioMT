@@ -12,7 +12,20 @@ function setRadioImage(radioImage, radioName) {
 }
 
 function startRadio() {
-    document.querySelector('audio').play();
+    let playAudio = document.querySelector('audio').play();
+
+    if (playAudio !== undefined) {
+        playAudio.then(_ => {
+            // Automatic playback started!
+            // Show playing UI.
+            console.log('Audio playing...');
+        })
+        .catch(error => {
+            // Auto-play was prevented
+            // Show paused UI.
+            console.log('Audio paused...');
+        });
+    }
 }
 
 function stopRadio() {
