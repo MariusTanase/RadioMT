@@ -42,17 +42,12 @@ const Settings = () => {
         {/* menu with the following options: */}
         {/* - change background */}
         {/* - change theme - DONE*/}
-        {/* - change language */}
-        {/* - change volume */}
-        {/* - change player size */}
-        {/* - change player position */}
-        {/* - change player color */}
-        {/* - change player opacity */}
-        {/* - change player animation */}
-        {/* - change player animation speed */}
-        {/* - change player animation direction */}
-        {/* - change player animation opacity */}
-        {/* - change player animation sync */}
+        {/* - change language - Not necessary*/}
+        {/* - change player position - Will take in consideration on a later date*/}
+        {/* - change player color - Implemented in theme*/}
+        {/* - change player opacity - Not necessary*/}
+        {/* - change player animation - Not necessary - there is background animation*/}
+
         <button className='settings-button' onClick={
             () => {
                 handleMenu()
