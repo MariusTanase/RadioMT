@@ -112,6 +112,16 @@
         height: 100%;
     }
 
+    .settings-button__close{
+        position: fixed;
+        bottom: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: .75rem;
+    }
+
 }
 
 .hidden{

@@ -65,6 +65,7 @@
 @media screen and (max-width: 720px) {
     .radios-container {
         width: 90%;
+        margin-bottom: 6rem;
     }
 
     .radios-container img {
