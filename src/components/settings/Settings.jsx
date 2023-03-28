@@ -57,9 +57,10 @@ const Settings = () => {
             <FontAwesomeIcon icon={faGear} className='spin'/>
         </button>
         <div className='settings-menu hidden'>
+          <div className='settings-menu-wrapper'>
           <ThemeMenu category={'Theme'} content={themeContent}/>
           <BackgroundMenu />
-
+          </div>
             <button className='settings-button__close' onClick={
             () => {
               closeMenu()

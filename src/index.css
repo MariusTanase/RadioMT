@@ -132,7 +132,7 @@
   --player-color: hsla(0, 0%, 100%, 1);
   --button-color: hsla(0, 0%, 100%, 1);
 
-  --hover-thumb-color: hsla(var(--blue-hue), var(--saturation-100), var(--light-10), var(--opacity-10));
+  --hover-thumb-color: hsla(var(--blue-hue), var(--saturation-100), var(--light-20), var(--opacity-10));
 
   --hover-button-color: hsla(var(--blue-hue), var(--saturation-100), var(--light-50), var(--opacity-10));
 

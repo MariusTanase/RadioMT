@@ -23,6 +23,8 @@
     cursor: pointer;
     font-size: 3rem;
     color: var(--text-color);
+
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -40,6 +42,7 @@
     align-items: center;
     flex-direction: column;
 
+    transition: all 0.3s ease-in-out;
 }
 
 .settings-button__close{
@@ -60,6 +63,8 @@
     font-weight: 700;
     margin: 1rem auto;
 }
+
+
 
 .settings-button__close:hover{
     background-color: var(--hover-primary-button);
@@ -110,16 +115,23 @@
         left: 0;
         width: 100%;
         height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .settings-menu-wrapper {
+        width: 100%;
+        margin: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     .settings-button__close{
-        position: fixed;
-        bottom: 4rem;
-        left: 50%;
-        transform: translateX(-50%);
         font-size: 2rem;
         padding: 1rem;
         border-radius: .75rem;
+        margin-bottom: 5rem;
     }
 
 }
