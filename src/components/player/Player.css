@@ -96,3 +96,14 @@
     background: var(--text-color);
     opacity: .9;
   }
+
+  .volume-control input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--hover-thumb-color);
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+
+  }
