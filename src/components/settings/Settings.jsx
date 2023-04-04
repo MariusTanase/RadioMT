@@ -39,16 +39,6 @@ const Settings = () => {
 
   return (
     <div className='settings-container'>
-        {/* button with fa setting that will open and close as a menu */}
-        {/* menu with the following options: */}
-        {/* - change background */}
-        {/* - change theme - DONE*/}
-        {/* - change language - Not necessary*/}
-        {/* - change player position - Will take in consideration on a later date*/}
-        {/* - change player color - Implemented in theme*/}
-        {/* - change player opacity - Not necessary*/}
-        {/* - change player animation - Not necessary - there is background animation*/}
-
         <button className='settings-button' onClick={
             () => {
                 handleMenu()
