@@ -35,6 +35,7 @@ const Settings = () => {
     'Light': 'Light',
     'Dark': 'Dark',
     'Crimson': 'Crimson',
+    'Blue': 'Blue'
   }
 
   return (
