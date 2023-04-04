@@ -14,7 +14,8 @@ const Settings = () => {
     button.classList.add('hidden')
   
     const settingsMenu = document.querySelector('.settings-menu')
-    settingsMenu.classList.remove('hidden')
+    settingsMenu.classList.add('open')
+
   
     const closeButton = document.querySelector('.settings-button__close')
     closeButton.classList.remove('hidden')
@@ -25,7 +26,7 @@ const Settings = () => {
     closeButton.classList.toggle('hidden')
   
     const settingsMenu = document.querySelector('.settings-menu')
-    settingsMenu.classList.add('hidden')
+    settingsMenu.classList.remove('open')
   
     const button = document.querySelector('.settings-button')
     button.classList.remove('hidden')
@@ -47,7 +48,7 @@ const Settings = () => {
         }>       
             <FontAwesomeIcon icon={faGear} className='spin'/>
         </button>
-        <div className='settings-menu hidden'>
+        <div className='settings-menu'>
           <div className='settings-menu-wrapper'>
           <ThemeMenu category={'Theme'} content={themeContent}/>
           <BackgroundMenu />

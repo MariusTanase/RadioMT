@@ -7,7 +7,6 @@
     padding: 1rem;
     z-index: 100;
     display: flex;
-
     color: var(--text-color);
 
     justify-content: center;
@@ -41,8 +40,17 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    transform: translateX(100%);
 
     transition: all 0.3s ease-in-out;
+}
+
+.settings-menu.open{
+    transform: translateX(0%);
+}
+
+.open{
+    transform: translateX(0%);
 }
 
 .settings-button__close{
