@@ -62,7 +62,7 @@ export const radios = [
         genre: 'Lofi',
         image: 'https://cdn.onlineradiobox.com/img/l/8/97478.v9.png',
         url: 'https://play.streamafrica.net/lofiradio'
-    }
+    },
     {
         id: 9,
         title: 'Smooth Radio',
