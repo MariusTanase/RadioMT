@@ -102,5 +102,29 @@ export const radios = [
         genre: 'Deep House',
         image: 'https://cdn.onlineradiobox.com/img/l/9/72699.v21.png',
         url: 'https://stream.radiojar.com/9ndpdg3c0s8uv'
+    },
+    {
+        id: 12,
+        title: 'Kiss FM',
+        artist: 'Dance',
+        genre: 'Dance',
+        image: 'https://cdn.onlineradiobox.com/img/l/1/1.v52.png',
+        url: 'https://online.kissfm.ua/KissFM'
+    },
+    {
+        id: 12,
+        title: 'One FM Romania',
+        artist: 'Dance',
+        genre: 'Dance',
+        image: 'https://cdn.onlineradiobox.com/img/l/1/64941.v8.png',
+        url: 'https://live.onefm.ro/onefm.aacp'
+    },
+    {
+        id: 13,
+        title: 'Radio Zu Romania',
+        artist: "Romanian",
+        genre: "Romanian",
+        image: 'https://cdn.onlineradiobox.com/img/l/3/18773.v18.png',
+        url: 'https://live4ro.antenaplay.ro/radiozu/radiozu-48000.m3u8'
     }
 ]
