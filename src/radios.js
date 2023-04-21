@@ -118,13 +118,5 @@ export const radios = [
         genre: 'Dance',
         image: 'https://cdn.onlineradiobox.com/img/l/1/64941.v8.png',
         url: 'https://live.onefm.ro/onefm.aacp'
-    },
-    {
-        id: 13,
-        title: 'Radio Zu Romania',
-        artist: "Romanian",
-        genre: "Romanian",
-        image: 'https://cdn.onlineradiobox.com/img/l/3/18773.v18.png',
-        url: 'https://live4ro.antenaplay.ro/radiozu/radiozu-48000.m3u8'
     }
 ]
