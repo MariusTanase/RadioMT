@@ -63,6 +63,44 @@ export const radios = [
         image: 'https://cdn.onlineradiobox.com/img/l/8/97478.v9.png',
         url: 'https://play.streamafrica.net/lofiradio'
     }
-    
-
+    {
+        id: 9,
+        title: 'Smooth Radio',
+        artist: 'Smooth',
+        genre: 'Smooth',
+        image: 'https://cdn.onlineradiobox.com/img/l/4/964.v11.png',
+        url: 'https://media-ssl.musicradio.com/SmoothLondonMP3'
+    },
+    {
+        id: 10,
+        title: 'Vanilla Radio',
+        artist: 'Deep House',
+        genre: 'Deep House',
+        image: 'https://cdn.onlineradiobox.com/img/l/5/18395.v18.png',
+        url: 'https://stream.vanillaradio.com:8012/live'
+    },
+    {
+        id: 10,
+        title: 'Music Factory',
+        artist: 'Deep House',
+        genre: 'Deep House',
+        image: 'https://cdn.onlineradiobox.com/img/l/8/16548.v12.png',
+        url: 'https://i4.streams.ovh/sc/musicfactory/stream'
+    },
+    {
+        id: 11,
+        title: 'TRANCE IS STAR RADIO',
+        artist: 'Trace',
+        genre: 'Trace',
+        image: 'https://cdn.onlineradiobox.com/img/l/4/184.v11.png',
+        url: 'https://i4.streams.ovh/sc/musicfactory/stream'
+    },
+    {
+        id: 12,
+        title: 'Athens Up Radio',
+        artist: 'Deep House',
+        genre: 'Deep House',
+        image: 'https://cdn.onlineradiobox.com/img/l/9/72699.v21.png',
+        url: 'https://stream.radiojar.com/9ndpdg3c0s8uv'
+    }
 ]
