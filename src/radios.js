@@ -48,14 +48,6 @@ export const radios = [
         url: 'https://online.kissfm.ua/KissFM_Deep'
     },
     {
-        id: 7,
-        title: 'ZILLION!FM',
-        artist: 'Deep House',
-        genre: 'Deep House',
-        image: 'https://cdn.onlineradiobox.com/img/l/7/53347.v37.png',
-        url: 'https://ascella.streamerr.co/listen/zillionfm/mobile.mp3'
-    },
-    {
         id: 8,
         title: 'Lofi Radio',
         artist: 'Lofi',
@@ -80,7 +72,7 @@ export const radios = [
         url: 'https://stream.vanillaradio.com:8012/live'
     },
     {
-        id: 10,
+        id: 11,
         title: 'Music Factory',
         artist: 'Deep House',
         genre: 'Deep House',
@@ -88,15 +80,15 @@ export const radios = [
         url: 'https://i4.streams.ovh/sc/musicfactory/stream'
     },
     {
-        id: 11,
+        id: 12,
         title: 'TRANCE IS STAR RADIO',
         artist: 'Trace',
         genre: 'Trace',
         image: 'https://cdn.onlineradiobox.com/img/l/4/184.v11.png',
-        url: 'https://i4.streams.ovh/sc/musicfactory/stream'
+        url: 'https://myradio24.org/tisradio'
     },
     {
-        id: 12,
+        id: 13,
         title: 'Athens Up Radio',
         artist: 'Deep House',
         genre: 'Deep House',
@@ -104,7 +96,7 @@ export const radios = [
         url: 'https://stream.radiojar.com/9ndpdg3c0s8uv'
     },
     {
-        id: 12,
+        id: 14,
         title: 'Kiss FM',
         artist: 'Dance',
         genre: 'Dance',
@@ -112,11 +104,41 @@ export const radios = [
         url: 'https://online.kissfm.ua/KissFM'
     },
     {
-        id: 12,
+        id: 15,
         title: 'One FM Romania',
         artist: 'Dance',
         genre: 'Dance',
         image: 'https://cdn.onlineradiobox.com/img/l/1/64941.v8.png',
         url: 'https://live.onefm.ro/onefm.aacp'
-    }
+    },
+    {
+        id: 16,
+        title: 'Japan Hits',
+        artist: 'J-Pop',
+        genre: 'J-Pop',
+        image: 'https://cdn.onlineradiobox.com/img/l/0/64360.v9.png',
+        url: 'https://igor.torontocast.com/JapanHits'
+    },{
+        id: 17,
+        title: 'J-Pop Powerplay',
+        artist: 'J-Pop',
+        genre: 'J-Pop',
+        image: 'https://cdn.onlineradiobox.com/img/l/0/64360.v9.png',
+        url: 'https://kathy.torontocast.com:3560/;'
+    },
+    {
+        id: 18,
+        title: 'J-Pop Powerplay Kawaii',
+        artist: 'J-Pop - Anime',
+        genre: 'J-Pop - Anime',
+        image: 'https://cdn.onlineradiobox.com/img/l/9/13379.v11.png',
+        url: 'https://kathy.torontocast.com:3060/;'
+    },{
+        id: 18,
+        title: 'J-Rock Powerplay - Rock',
+        artist: 'J-Pop - Anime',
+        genre: 'J-Pop - Anime',
+        image: 'https://cdn.onlineradiobox.com/img/l/3/64373.v11.png',
+        url: 'https://kathy.torontocast.com:3340/;'
+    },
 ]
