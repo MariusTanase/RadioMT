@@ -136,9 +136,23 @@ export const radios = [
     },{
         id: 19,
         title: 'J-Rock Powerplay - Rock',
-        artist: 'J-Pop - Anime',
-        genre: 'J-Pop - Anime',
+        artist: 'J-Rock ',
+        genre: 'J-Rock',
         image: 'https://cdn.onlineradiobox.com/img/l/3/64373.v11.png',
         url: 'https://kathy.torontocast.com:3340/;'
+    },{
+        id: 20,
+        title: 'Southsound Kpop',
+        artist: 'K-Pop',
+        genre: 'K-Pop',
+        image: 'https://cdn.onlineradiobox.com/img/l/1/53781.v12.png',
+        url: 'https://c4.radioboss.fm:18071/stream'
+    },{
+        id: 21,
+        title: 'BOX : K-POP',
+        artist: 'K-Pop',
+        genre: 'K-Pop',
+        image: 'https://cdn.onlineradiobox.com/img/l/9/97489.v8.png',
+        url: 'https://play.streamafrica.net/kpopradio'
     },
 ]
