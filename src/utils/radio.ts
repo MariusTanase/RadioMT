@@ -16,7 +16,6 @@ async function startRadio(): Promise<void> {
         await document.querySelector('audio').play();
         console.log('Audio playing...')
     } catch (error) {
-        console.error(error);
         console.log('Audio paused...')
     }
 }

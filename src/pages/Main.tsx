@@ -1,4 +1,3 @@
-import React from 'react'
 import Background from '../components/background/background'
 import Footer from '../components/footer/Footer'
 import Player from '../components/player/Player'
@@ -9,11 +8,11 @@ import { radios } from '../radios'
 const Main = () => {
   return (
     <>
-        <Background/>
-        <Player list={radios}/>
-        <RadioList />
-        <Settings />
-        <Footer />
+      <Background />
+      <Player list={radios} />
+      <RadioList />
+      <Settings />
+      <Footer />
     </>
   )
 }
