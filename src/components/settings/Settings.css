@@ -76,6 +76,7 @@
 
 .settings-button__close:hover{
     background-color: var(--hover-primary-button);
+    border: solid 1px var(--hover-primary-button-border);
 }
 
 

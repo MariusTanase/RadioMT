@@ -10,7 +10,7 @@
     height: 1.2rem;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     
     position: fixed;
@@ -32,4 +32,17 @@
     .footer{
         display: none;
     }
+}
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.1rem;
+}
+
+.footer__socials a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.3rem;
 }
