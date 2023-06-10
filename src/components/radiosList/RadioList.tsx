@@ -3,7 +3,11 @@ import { radios } from '@/radios'
 import { setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage } from '@/utils/radio'
 import './RadioList.css'
 
-const RadioList = ({ toggleUI }: Boolean) => {
+type toggleType = {
+  toggleUI: boolean
+}
+
+const RadioList = ({ toggleUI }: toggleType) => {
 
   const changeRadio = (radio: any) => {
     // change the source of the audio player
@@ -16,6 +20,13 @@ const RadioList = ({ toggleUI }: Boolean) => {
     startRadio()
   }
 
+  interface RadioObject {
+    id: number,
+    title: string,
+    genre: string,
+    image: string,
+    url: string
+  }
 
   const radioPlaylistContainer = useRef(null);
 
@@ -30,7 +41,7 @@ const RadioList = ({ toggleUI }: Boolean) => {
       {/* create a widget container that will contain all the radios from {radios} */}
       <ul className='radios-list'>
         {/* map through the radios list and create a list item for each radio */}
-        {radios.map((radio): any => {
+        {radios.map((radio: RadioObject) => {
           // extract the id and title to generate the elements of the 'buttons'
           const { id, title } = radio
           return (
