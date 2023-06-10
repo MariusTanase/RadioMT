@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Player.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShuffle, faForward, faBackward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+// @ts-ignore
 import { startRadio, stopRadio, setRadio, setRadioGenre, setRadioImage, setRadioName, setRadioVolume } from '@/utils/radio'
 
 
@@ -83,6 +84,7 @@ const Player = ({ list, toggleUI }: any) => {
 
   useEffect(() => {
     // if toggleUI is false hide the ui
+    // @ts-ignore
     toggleUI ? playerContainer.current.classList.add('hidden') : playerContainer.current.classList.remove('hidden');
   }, [toggleUI])
 

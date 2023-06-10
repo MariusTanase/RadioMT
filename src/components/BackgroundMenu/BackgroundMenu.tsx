@@ -1,5 +1,6 @@
 import React from 'react'
 import './BackgroundMenu.css'
+// @ts-ignore 
 import { generateImage } from '@/utils/unsplashBackgroundGeneration'
 
 const BackgroundMenu = () => {

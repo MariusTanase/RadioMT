@@ -2,7 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Settings.css'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
+// @ts-ignore
 import { ThemeMenu } from '@/components/ThemeMenu/ThemeMenu'
+// @ts-ignore
+
 import BackgroundMenu from '@/components/BackgroundMenu/BackgroundMenu'
 
 
@@ -15,24 +18,30 @@ const Settings = ({ toggleUI }: SettingsProps) => {
 
   const handleMenu = () => {
     const button = document.querySelector('.settings-button')
+// @ts-ignore
     button.classList.add('hidden')
 
     const settingsMenu = document.querySelector('.settings-menu')
+// @ts-ignore
     settingsMenu.classList.add('open')
 
 
     const closeButton = document.querySelector('.settings-button__close')
+    // @ts-ignore
     closeButton.classList.remove('hidden')
   }
 
   const closeMenu = () => {
     const closeButton = document.querySelector('.settings-button__close')
+    // @ts-ignore
     closeButton.classList.toggle('hidden')
 
     const settingsMenu = document.querySelector('.settings-menu')
+    // @ts-ignore
     settingsMenu.classList.remove('open')
 
     const button = document.querySelector('.settings-button')
+    // @ts-ignore
     button.classList.remove('hidden')
   }
 

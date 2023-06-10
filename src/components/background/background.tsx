@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import './background.css';
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
+// @ts-ignore: 'generateImage' is declared but its value is never read.
 import { generateImage } from '@/utils/unsplashBackgroundGeneration'
 
 const Background = () => {
