@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Background from '../components/background/background'
 import Footer from '../components/footer/Footer'
 import Player from '../components/player/Player'
@@ -6,12 +7,18 @@ import Settings from '../components/settings/Settings'
 import { radios } from '../radios'
 
 const Main = () => {
+  let [showUI, setShowUI] = useState(false);
+
+  let toggleUI = () => {
+    setShowUI(!showUI)
+  }
+
   return (
     <>
       <Background />
-      <Player list={radios} />
-      <RadioList />
-      <Settings />
+      <Player list={radios} toggleUI={showUI} />
+      <RadioList toggleUI={showUI} />
+      <Settings toggleUI={toggleUI} />
       <Footer />
     </>
   )
