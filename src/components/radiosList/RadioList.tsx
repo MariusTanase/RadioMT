@@ -7,6 +7,14 @@ type toggleType = {
   toggleUI: boolean
 }
 
+interface RadioObject {
+  id: number,
+  title: string,
+  genre: string,
+  image: string,
+  url: string
+}
+
 const RadioList = ({ toggleUI }: toggleType) => {
 
   const changeRadio = (radio: any) => {
@@ -18,14 +26,6 @@ const RadioList = ({ toggleUI }: toggleType) => {
     setRadioGenre(genre)
     setRadioImage(image, title)
     startRadio()
-  }
-
-  interface RadioObject {
-    id: number,
-    title: string,
-    genre: string,
-    image: string,
-    url: string
   }
 
   const radioPlaylistContainer = useRef(null);
