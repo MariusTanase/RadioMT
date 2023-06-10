@@ -140,9 +140,10 @@ const Player = ({ list, toggleUI }: any) => {
           {/* value has to change when slide */}
           <input type="range" min="0" max="1" step="0.01"
             className='volume-slider'
+            // @ts-ignore
             value={audioRef.current ? audioRef.current.volume : 0}
             onChange={
-              (e) => volumeControl(e.target.value)
+              (e) => volumeControl(Number(e.target.value))
             } />
         </div>
       </div>
