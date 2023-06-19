@@ -9,7 +9,7 @@ type toggleType = {
 }
 
 interface RadioObject {
-  id: number,
+  id?: number,
   title: string,
   genre: string,
   image: string,
@@ -18,7 +18,7 @@ interface RadioObject {
 
 const RadioList = ({ toggleUI }: toggleType) => {
 
-  const changeRadio = (radio: any) => {
+  const changeRadio = (radio: RadioObject) => {
     // change the source of the audio player
     const { url, title, genre, image } = radio
 
