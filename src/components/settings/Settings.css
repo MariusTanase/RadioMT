@@ -8,11 +8,11 @@
     z-index: 100;
     display: flex;
     color: var(--text-color);
-
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
+    overflow-y: scroll;
 }
 
 .settings-button{
@@ -22,7 +22,6 @@
     cursor: pointer;
     font-size: 3rem;
     color: var(--text-color);
-
     transition: all 0.3s ease-in-out;
 }
 
@@ -41,7 +40,6 @@
     align-items: center;
     flex-direction: column;
     transform: translateX(100%);
-
     transition: all 0.3s ease-in-out;
 }
 
@@ -122,6 +120,7 @@
         position : fixed;
         top: 0;
         left: 0;
+
         width: 100%;
         height: 100%;
 

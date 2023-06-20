@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useRef } from 'react'
 import './Settings.css'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 // @ts-ignore
@@ -13,29 +13,44 @@ type SettingsProps = {
   toggleUI: () => void
 }
 
+const themeContent = {
+  Light: 'Light',
+  Dark: 'Dark',
+  Crimson: 'Crimson',
+  Blue: 'Blue',
+};
 
 const Settings = ({ toggleUI }: SettingsProps) => {
 
+
+  const settingsContainer = document.querySelector('.settings-container')
+
   const handleMenu = () => {
+    // @ts-ignore
+    settingsContainer.backgroundColor = 'red';
     const button = document.querySelector('.settings-button')
-// @ts-ignore
+    // @ts-ignore
     button.classList.add('hidden')
 
     const settingsMenu = document.querySelector('.settings-menu')
-// @ts-ignore
+    // @ts-ignore
     settingsMenu.classList.add('open')
 
 
     const closeButton = document.querySelector('.settings-button__close')
     // @ts-ignore
     closeButton.classList.remove('hidden')
+    // @ts-ignore
+
+
   }
 
   const closeMenu = () => {
+
     const closeButton = document.querySelector('.settings-button__close')
     // @ts-ignore
     closeButton.classList.toggle('hidden')
-
+    // @ts-ignore
     const settingsMenu = document.querySelector('.settings-menu')
     // @ts-ignore
     settingsMenu.classList.remove('open')
@@ -44,14 +59,6 @@ const Settings = ({ toggleUI }: SettingsProps) => {
     // @ts-ignore
     button.classList.remove('hidden')
   }
-
-  let themeContent = {
-    'Light': 'Light',
-    'Dark': 'Dark',
-    'Crimson': 'Crimson',
-    'Blue': 'Blue'
-  }
-
 
   return (
     <div className='settings-container'>
