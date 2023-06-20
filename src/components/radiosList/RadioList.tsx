@@ -19,7 +19,6 @@ interface RadioObject {
 const RadioList = ({ toggleUI }: toggleType) => {
 
   const changeRadio = (radio: RadioObject) => {
-    // change the source of the audio player
     const { url, title, genre, image } = radio
 
     setRadio(url)
@@ -29,7 +28,7 @@ const RadioList = ({ toggleUI }: toggleType) => {
     startRadio()
   }
 
-  const radioPlaylistContainer = useRef(null);
+  const radioPlaylistContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
       toggleUI
