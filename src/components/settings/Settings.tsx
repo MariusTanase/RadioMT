@@ -35,7 +35,7 @@ const Settings = ({ toggleUI }: SettingsProps) => {
 
 
   return (
-    <div className="settings-container">
+    <div className={`settings-container ${isMenuOpen ? "noBackground" : ''}`}>
       <button className={`settings-button ${isMenuOpen ? 'hidden' : ''}`} onClick={showMenu}>
         <FontAwesomeIcon icon={faGear} className="spin" />
       </button>
@@ -48,10 +48,7 @@ const Settings = ({ toggleUI }: SettingsProps) => {
           </h5>
           <CustomButton title={!isUIHidden ? "Hide UI" : "Show UI"} className="settings-button__close" action={toggleUIVisibility}/>
         </div>
-
-
-        <CustomButton title="Close Menu" className="settings-button__close" action={closeMenu} />
-
+        <CustomButton title="Close" className="settings-button__close-menu" action={closeMenu} />
       </div>
     </div>
   );
