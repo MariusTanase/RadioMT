@@ -12,7 +12,7 @@ const BackgroundMenu = () => {
 
     return (
         <div className='background-container'>
-            <h5 className='background-category__title'>
+            <h5 className='settings-category__title'>
                 Select Background
             </h5>
             <div className='background-container__items'>

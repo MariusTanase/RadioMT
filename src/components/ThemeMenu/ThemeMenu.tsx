@@ -17,7 +17,7 @@ const ThemeMenu = ({ content }) => {
 
     return (
         <div className='theme-container'>
-            <h5 className='theme-category__title'>
+            <h5 className='settings-category__title'>
                 <p>Select Theme</p>
             </h5>
             <div className='theme-container__items'>

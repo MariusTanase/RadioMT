@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Settings.css'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 // @ts-ignore
@@ -18,6 +18,7 @@ const themeContent = {
 
 const Settings = ({ toggleUI }: SettingsProps) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isUIHidden, setUIHidden] = useState(false);
 
   const showMenu = () => {
     setMenuOpen(true);
@@ -26,6 +27,12 @@ const Settings = ({ toggleUI }: SettingsProps) => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
+  const toggleUIVisibility = () => {
+    setUIHidden(!isUIHidden);
+    toggleUI()
+  };
+
 
   return (
     <div className="settings-container">
@@ -36,10 +43,14 @@ const Settings = ({ toggleUI }: SettingsProps) => {
         <div className="settings-menu-wrapper">
           <ThemeMenu category="Theme" content={themeContent} />
           <BackgroundMenu />
-          <CustomButton title="Hide Interface" className="settings-button__close" action={toggleUI} />
+          <h5 className='settings-category__title'>
+            Extra
+          </h5>
+          <CustomButton title={!isUIHidden ? "Hide UI" : "Show UI"} className="settings-button__close" action={toggleUIVisibility}/>
         </div>
 
-          <CustomButton title="Close Menu" className="settings-button__close" action={closeMenu} />
+
+        <CustomButton title="Close Menu" className="settings-button__close" action={closeMenu} />
 
       </div>
     </div>

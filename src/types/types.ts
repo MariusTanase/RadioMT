@@ -14,6 +14,7 @@ export type ButtonType = {
     className: string,
     action: () => void,
     title: string
+    isHidden?: boolean
 }
 
 export type SettingsProps = {

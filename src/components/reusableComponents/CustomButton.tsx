@@ -2,7 +2,7 @@ import React from 'react'
 import { ButtonType } from '../../types/types'
 
 const CustomButton = (props : ButtonType) => {
-    const { className, action, title } = props
+    let { className, action, title, isHidden } = props
 
     return (
         <button className={className} onClick={action}>

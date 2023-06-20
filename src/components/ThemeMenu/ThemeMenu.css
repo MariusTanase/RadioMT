@@ -48,10 +48,6 @@
 }
 
 @media screen and (max-width: 720px) {
-  .theme-category__title{
-    font-size: 1.5rem;
-  }
-
   .theme-item{
     font-size: 1rem;
     margin: auto .2rem;
