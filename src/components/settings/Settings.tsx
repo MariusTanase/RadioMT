@@ -39,13 +39,17 @@ const Settings = ({ toggleUI }: SettingsProps) => {
       <div className={`settings-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="settings-menu-wrapper">
           <ThemeMenu category="Theme" content={themeContent} />
+          
           <BackgroundMenu />
-        </div>
-        <div>
+
           <button className="settings-button__close" onClick={toggleUI}>
             HidePlayer
           </button>
+
         </div>
+
+
+
         <button className="settings-button__close" onClick={closeMenu}>
           Close
         </button>
