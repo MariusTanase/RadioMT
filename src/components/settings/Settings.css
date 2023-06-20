@@ -99,9 +99,7 @@
         width: 100%;
         height: 5rem;
         background-color: var(--background-menu);
-
-        border-radius: none;
-
+        
         margin: 0 auto;
 
         position: fixed;
@@ -121,6 +119,8 @@
 
         width: 100%;
         height: 100%;
+
+        border-radius: 0;
 
         display: flex;
         justify-content: space-between;
