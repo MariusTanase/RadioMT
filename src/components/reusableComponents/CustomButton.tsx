@@ -1,11 +1,5 @@
 import React from 'react'
-
-type ButtonType = {
-    className: string,
-    action: () => void,
-    title: string
-}
-
+import { ButtonType } from '../../types/types'
 
 const CustomButton = (props : ButtonType) => {
     const { className, action, title } = props

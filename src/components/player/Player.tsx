@@ -83,7 +83,6 @@ const Player = ({ list, toggleUI }: any) => {
   const playerContainer = useRef(null);
 
   useEffect(() => {
-    // if toggleUI is false hide the ui
     // @ts-ignore
     toggleUI ? playerContainer.current.classList.add('hidden') : playerContainer.current.classList.remove('hidden');
   }, [toggleUI])

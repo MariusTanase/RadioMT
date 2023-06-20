@@ -4,17 +4,7 @@ import { radios } from '@/radios'
 // @ts-ignore: 'setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage' is declared but its value is never read.
 import { setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage } from '@/utils/radio'
 import './RadioList.css'
-
-type toggleType = {
-  toggleUI: boolean
-}
-interface RadioObject {
-  id?: number,
-  title: string,
-  genre: string,
-  image: string,
-  url: string
-}
+import { RadioObject, toggleType } from '../../types/types'
 
 const RadioList = ({ toggleUI }: toggleType) => {
 

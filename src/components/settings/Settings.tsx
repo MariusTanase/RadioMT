@@ -5,14 +5,9 @@ import { faGear } from '@fortawesome/free-solid-svg-icons'
 // @ts-ignore
 import { ThemeMenu } from '@/components/ThemeMenu/ThemeMenu'
 // @ts-ignore
-
 import BackgroundMenu from '@/components/BackgroundMenu/BackgroundMenu'
 import CustomButton from '../reusableComponents/CustomButton'
-
-
-type SettingsProps = {
-  toggleUI: () => void
-}
+import { SettingsProps } from '../../types/types'
 
 const themeContent = {
   Light: 'Light',
