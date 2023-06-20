@@ -23,7 +23,7 @@ const themeContent = {
 const Settings = ({ toggleUI }: SettingsProps) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const handleMenu = () => {
+  const showMenu = () => {
     setMenuOpen(true);
   };
 
@@ -33,7 +33,7 @@ const Settings = ({ toggleUI }: SettingsProps) => {
 
   return (
     <div className="settings-container">
-      <button className={`settings-button ${isMenuOpen ? 'hidden' : ''}`} onClick={handleMenu}>
+      <button className={`settings-button ${isMenuOpen ? 'hidden' : ''}`} onClick={showMenu}>
         <FontAwesomeIcon icon={faGear} className="spin" />
       </button>
       <div className={`settings-menu ${isMenuOpen ? 'open' : ''}`}>
