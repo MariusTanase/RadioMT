@@ -4,10 +4,10 @@ import { radios } from '@/radios'
 // @ts-ignore: 'setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage' is declared but its value is never read.
 import { setRadio, setRadioName, startRadio, setRadioGenre, setRadioImage } from '@/utils/radio'
 import './RadioList.css'
+
 type toggleType = {
   toggleUI: boolean
 }
-
 interface RadioObject {
   id?: number,
   title: string,
@@ -32,9 +32,12 @@ const RadioList = ({ toggleUI }: toggleType) => {
   const radioPlaylistContainer = useRef(null);
 
   useEffect(() => {
-    // @ts-ignore: 'radioPlaylistContainer.current' is possibly 'null'
-    toggleUI ? radioPlaylistContainer?.current.classList.add('hidden') : radioPlaylistContainer?.current.classList.remove('hidden');
-  }, [toggleUI])
+      toggleUI
+          // @ts-ignore
+        ? radioPlaylistContainer.current.classList.add('hidden')
+         // @ts-ignore
+        : radioPlaylistContainer.current.classList.remove('hidden');
+  }, [toggleUI]);
 
 
   return (
