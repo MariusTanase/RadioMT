@@ -32,31 +32,26 @@ const Settings = ({ toggleUI }: SettingsProps) => {
   };
 
   return (
-    <div className='settings-container'>
-      <button className='settings-button' onClick={
-        () => {
-          handleMenu()
-        }
-      }>
-        <FontAwesomeIcon icon={faGear} className='spin' />
+    <div className="settings-container">
+      <button className={`settings-button ${isMenuOpen ? 'hidden' : ''}`} onClick={handleMenu}>
+        <FontAwesomeIcon icon={faGear} className="spin" />
       </button>
-      <div className='settings-menu'>
-        <div className='settings-menu-wrapper'>
-          <ThemeMenu category={'Theme'} content={themeContent} />
+      <div className={`settings-menu ${isMenuOpen ? 'open' : ''}`}>
+        <div className="settings-menu-wrapper">
+          <ThemeMenu category="Theme" content={themeContent} />
           <BackgroundMenu />
         </div>
-
         <div>
-          <button className='settings-button__close' onClick={toggleUI}>HidePlayer</button>
+          <button className="settings-button__close" onClick={toggleUI}>
+            HidePlayer
+          </button>
         </div>
-
-        <button className='settings-button__close' onClick={
-          () => {
-            closeMenu()
-          }}>Close</button>
+        <button className="settings-button__close" onClick={closeMenu}>
+          Close
+        </button>
       </div>
     </div>
-  )
+  );
 }
 
 export default Settings
