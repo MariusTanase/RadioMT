@@ -7,6 +7,7 @@ import { ThemeMenu } from '@/components/ThemeMenu/ThemeMenu'
 // @ts-ignore
 
 import BackgroundMenu from '@/components/BackgroundMenu/BackgroundMenu'
+import CustomButton from '../reusableComponents/CustomButton'
 
 
 type SettingsProps = {
@@ -39,20 +40,12 @@ const Settings = ({ toggleUI }: SettingsProps) => {
       <div className={`settings-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="settings-menu-wrapper">
           <ThemeMenu category="Theme" content={themeContent} />
-          
           <BackgroundMenu />
-
-          <button className="settings-button__close" onClick={toggleUI}>
-            HidePlayer
-          </button>
-
+          <CustomButton title="Hide Interface" className="settings-button__close" action={toggleUI} />
         </div>
 
+          <CustomButton title="Close Menu" className="settings-button__close" action={closeMenu} />
 
-
-        <button className="settings-button__close" onClick={closeMenu}>
-          Close
-        </button>
       </div>
     </div>
   );
