@@ -48,7 +48,7 @@ const Settings = ({ toggleUI }: SettingsProps) => {
           </h5>
           <CustomButton title={!isUIHidden ? "Hide UI" : "Show UI"} className="settings-button__close" action={toggleUIVisibility}/>
         </div>
-        <CustomButton title="Close" className="settings-button__close-menu" action={closeMenu} />
+        <CustomButton title="X" className="settings-button__close-menu" action={closeMenu} />
       </div>
     </div>
   );

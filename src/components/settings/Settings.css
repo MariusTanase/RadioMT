@@ -39,7 +39,6 @@
     flex-direction: column;
     transform: translateX(100%);
     transition: all 0.3s ease-in-out;
-    overflow-y: scroll;
 }
 
 .settings-menu.open{
@@ -71,8 +70,8 @@
 
 .settings-button__close-menu{
     position: absolute;
-    top: 2%;
-    right: 4%;
+    top: 3%;
+    right: 6%;
     background-color: transparent;
     outline: none;
     border: none;
@@ -82,7 +81,7 @@
     color: var(--text-color);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
@@ -103,6 +102,10 @@
 
 .spin {
     animation: spin 10s linear infinite;
+}
+
+.settings-menu-wrapper {
+    padding-top: 3rem;
 }
 
 @keyframes spin {
@@ -148,16 +151,13 @@
 
         padding-top: 6rem;
 
+        height: 100%;
         width: 100%;
 
         border-radius: 0;
 
         display: flex;
         justify-content: space-between;
-    }
-
-    .settings-menu-wrapper {
-        width: 100%;
     }
 
     .settings-button__close{
