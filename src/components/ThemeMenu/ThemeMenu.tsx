@@ -25,9 +25,9 @@ const ThemeMenu = ({ content }) => {
                     Object.keys(content).map((key) => {
                         return (
                             <div key={key} className='theme-item' onClick={() => handleThemeChange(key.toLowerCase())}>
-                                <div className='theme-item__name' >
+                                <span className='theme-item__name' >
                                     {key}
-                                </div>
+                                </span>
                             </div>
                         )
                     })

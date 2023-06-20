@@ -72,7 +72,6 @@
 
 .settings-button__close:hover{
     background-color: var(--hover-primary-button);
-    border: solid 1px var(--hover-primary-button-border);
 }
 
 
@@ -99,7 +98,7 @@
         width: 100%;
         height: 5rem;
         background-color: var(--background-menu);
-        
+
         margin: 0 auto;
 
         position: fixed;
