@@ -13,7 +13,6 @@ const ThemeMenu = ({ content }) => {
     useEffect(() => {
         // change the window prefered theme to theme
         document.body.setAttribute('data-theme', theme);
-
     }, [theme]);
 
     return (
