@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useEffect, useState } from 'react'
+import {useState } from 'react'
 import './Settings.css'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 // @ts-ignore
@@ -32,7 +32,6 @@ const Settings = ({ toggleUI }: SettingsProps) => {
     setUIHidden(!isUIHidden);
     toggleUI()
   };
-
 
   return (
     <div className={`settings-container ${isMenuOpen ? "noBackground" : ''}`}>
